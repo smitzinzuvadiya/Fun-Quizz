@@ -33,7 +33,7 @@ export function Result() {
         <div className="flex flex-col gap-3">
           <button 
             onClick={() => navigate(`/quiz/${categoryId}`)}
-            className="w-full bg-primary text-white font-bold text-lg py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-[0.98]"
+            className="w-full bg-primary text-slate-900 font-bold text-lg py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-[0.98]"
           >
             <ArrowPathIcon className="w-6 h-6" /> Try Again
           </button>

@@ -37,7 +37,7 @@ export function Quiz() {
   const progress = ((currentQuestionIndex) / category.questions.length) * 100;
 
   const handleAnswer = (isCorrect) => {
-    registerQuestionAnswered();
+    registerQuestionAnswered(isCorrect);
 
     if (isCorrect) {
       setScore((prev) => prev + 1);
@@ -64,7 +64,7 @@ export function Quiz() {
       playSound('complete');
       const currentCompleted = parseInt(localStorage.getItem('quiz_total_completed') || '0', 10);
       localStorage.setItem('quiz_total_completed', (currentCompleted + 1).toString());
-      
+
       // Store session results to pass to Result page via localStorage or state
       // For simplicity we will pass via navigate state
       navigate('/result', { state: { score: score + (isCorrect ? 1 : 0), coinsEarned: coinsEarned + (isCorrect ? 10 : 0), totalQuestions: category.questions.length, categoryId: category.id } });
@@ -77,7 +77,7 @@ export function Quiz() {
 
   return (
     <div className="h-full flex flex-col pt-6 px-[20px] pb-8 animate-in slide-in-from-right duration-300">
-      <AdPopup isOpen={shouldShowAd} onClose={dismissAd} />
+      <AdPopup isOpen={shouldShowAd} onClose={dismissAd} adContext={adContext} />
 
       <header className="flex justify-between items-center mb-6">
         <button onClick={handleQuit} className="p-2 rounded-full bg-surface-variant hover:bg-outline-variant transition-colors">
@@ -94,7 +94,7 @@ export function Quiz() {
           <span>{category.questions.length}</span>
         </div>
         <div className="h-3 w-full bg-surface-variant rounded-full overflow-hidden">
-          <div 
+          <div
             className="h-full bg-gradient-to-r from-tertiary to-secondary rounded-full transition-all duration-500 ease-out"
             style={{ width: `${progress}%` }}
           />
@@ -102,9 +102,9 @@ export function Quiz() {
       </div>
 
       <main className="flex-1 flex flex-col justify-center">
-        <QuestionCard 
-          question={currentQuestion} 
-          onAnswer={handleAnswer} 
+        <QuestionCard
+          question={currentQuestion}
+          onAnswer={handleAnswer}
         />
       </main>
     </div>

@@ -47,11 +47,11 @@ export function AdPopup({ isOpen, onClose }) {
             </span>
           )}
         </div>
-        
+
         <div className="bg-background rounded-xl p-2 flex justify-center">
           <AdSlot />
         </div>
-        
+
         <p className="text-xs text-center text-on-surface-variant mt-4">
           Thank you for supporting our app!
         </p>

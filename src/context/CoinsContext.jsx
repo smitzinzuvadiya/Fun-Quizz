@@ -12,14 +12,23 @@ export function CoinsProvider({ children }) {
     return localStorage.getItem('quiz_welcome_bonus_claimed') === 'true';
   });
 
+  const [hasSeenLanding, setHasSeenLanding] = useState(() => {
+    return localStorage.getItem('quiz_seen_landing') === 'true';
+  });
+
   useEffect(() => {
     localStorage.setItem('quiz_coins', coins.toString());
   }, [coins]);
 
   const claimWelcomeBonus = () => {
-    setCoins(100);
+    setCoins((prev) => prev + 100);
     setHasClaimedBonus(true);
     localStorage.setItem('quiz_welcome_bonus_claimed', 'true');
+  };
+
+  const markLandingSeen = () => {
+    setHasSeenLanding(true);
+    localStorage.setItem('quiz_seen_landing', 'true');
   };
 
   const addCoins = (amount) => {
@@ -31,7 +40,7 @@ export function CoinsProvider({ children }) {
   };
 
   return (
-    <CoinsContext.Provider value={{ coins, addCoins, spendCoins, hasClaimedBonus, claimWelcomeBonus }}>
+    <CoinsContext.Provider value={{ coins, addCoins, spendCoins, hasClaimedBonus, claimWelcomeBonus, hasSeenLanding, markLandingSeen }}>
       {children}
     </CoinsContext.Provider>
   );
