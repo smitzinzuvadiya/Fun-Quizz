@@ -11,14 +11,14 @@ export function BottomNav() {
   ];
 
   return (
-    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[360px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl rounded-2xl flex justify-around items-center py-3 z-40">
+    <div className="w-full bg-[#6D4AFF] flex justify-around items-center py-2 z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] shrink-0">
       {navItems.map((item) => (
         <NavLink
           key={item.name}
           to={item.path}
           className={({ isActive }) =>
-            `flex flex-col items-center justify-center w-16 transition-transform ${
-              isActive ? 'text-primary scale-110' : 'text-on-surface-variant hover:text-primary/70'
+            `flex flex-col items-center justify-center flex-1 transition-all duration-300 ${
+              isActive ? 'text-white' : 'text-white/60 hover:text-white/90'
             }`
           }
         >
@@ -26,8 +26,8 @@ export function BottomNav() {
             const Icon = isActive ? item.iconSolid : item.iconOutline;
             return (
               <>
-                <Icon className="w-6 h-6 mb-1" />
-                <span className="text-[10px] font-bold tracking-wide">{item.name}</span>
+                <Icon className={`w-[26px] h-[26px] mb-1.5 ${isActive ? 'scale-110' : ''} transition-transform`} strokeWidth={isActive ? 2 : 2.5} />
+                <span className={`text-[11px] tracking-wide ${isActive ? 'font-black' : 'font-bold'}`}>{item.name}</span>
               </>
             );
           }}

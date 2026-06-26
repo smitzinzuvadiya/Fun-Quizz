@@ -1,6 +1,6 @@
 export function SponsoredAd() {
   return (
-    <div className="w-full flex justify-center bg-gray-50 py-4 mb-4 border-b border-gray-200">
+    <div className="w-full flex justify-center bg-transparent px-[20px] py-4 mb-4">
       {/* 
         TODO: Replace the placeholder div below with your real ad code (e.g., Google AdSense <ins> tag) 
         Example:
@@ -13,8 +13,8 @@ export function SponsoredAd() {
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       */}
 
-      <div className="w-full max-w-[336px] h-[280px] bg-surface-variant border-2 border-dashed border-outline-variant flex flex-col items-center justify-center text-on-surface-variant rounded-lg">
-        <span className="text-sm font-bold uppercase tracking-widest mb-2 opacity-50">Advertisement</span>
+      <div className="w-full h-[280px] bg-white border border-white/50 flex flex-col items-center justify-center text-slate-800 rounded-lg shadow-sm">
+        <span className="text-[10px] font-bold uppercase tracking-widest opacity-50 mb-2">Advertisement</span>
         <p className="text-xs text-center px-4 opacity-60">
           Ad placement reserved.<br />
           Insert ad code here.

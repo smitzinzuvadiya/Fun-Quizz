@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", sans-serif;
-  
+
   --color-primary: #62FAE3;
   --color-primary-dark: #40D4C0;
   --color-secondary: #FBBF24;
@@ -11,12 +11,12 @@
   --color-surface: #FFFFFF;
   --color-on-surface: #191c1e;
   --color-on-surface-variant: #4a4455;
-  
+
   --radius-sm: 0.25rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
-  
+
   --spacing-app-margin: 20px;
 }
 
@@ -24,6 +24,7 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;

@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CoinBadge } from '../components/CoinBadge';
 import { CategoryCard } from '../components/CategoryCard';
 import { AdPopup } from '../components/AdPopup';
 import quizData from '../data/quizData.json';
 import { useAds } from '../hooks/useAds';
 
+import { PromoCard } from '../components/PromoCard';
 
-export function Home() {
+export function PromoHome() {
   const [selectedFilter, setSelectedFilter] = useState('All');
   const filters = ['All', ...quizData.categories.map(c => c.name)];
 
@@ -22,13 +24,14 @@ export function Home() {
       <div className="pt-[68px] animate-in fade-in duration-500 flex flex-col h-full bg-[#7A61FE]">
         <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#7A61FE] flex justify-between items-center px-[20px] py-4 shadow-md">
           <div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-white flex items-center gap-2">
+            <Link to="/" className="text-3xl font-extrabold tracking-tight text-white flex items-center gap-2">
               Quizz
-            </h1>
+            </Link>
           </div>
           <CoinBadge />
         </header>
 
+        <PromoCard />
 
         {/* Ad Placement Container */}
         <div className="w-full mb-6 flex justify-center flex-shrink-0">

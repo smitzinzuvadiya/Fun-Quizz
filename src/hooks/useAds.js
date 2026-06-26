@@ -8,22 +8,21 @@ export function useAds() {
   const [questionsAnsweredInSession, setQuestionsAnsweredInSession] = useState(0);
 
   const registerQuestionAnswered = useCallback(() => {
-    setQuestionsAnsweredInSession((prev) => {
-      const newCount = prev + 1;
-      if (newCount % AD_INTERVAL === 0) {
-        setShouldShowAd(true);
-      }
-      return newCount;
-    });
+    setQuestionsAnsweredInSession((prev) => prev + 1);
   }, []);
 
   const dismissAd = useCallback(() => {
     setShouldShowAd(false);
   }, []);
 
+  const showAd = useCallback(() => {
+    setShouldShowAd(true);
+  }, []);
+
   return {
     shouldShowAd,
     registerQuestionAnswered,
     dismissAd,
+    showAd
   };
 }
