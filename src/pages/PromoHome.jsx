@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CoinBadge } from '../components/CoinBadge';
+import quizLogo from '../assets/quiz3.png';
 import { CategoryCard } from '../components/CategoryCard';
 import { AdPopup } from '../components/AdPopup';
 import quizData from '../data/quizData.json';
@@ -24,8 +25,8 @@ export function PromoHome() {
       <div className="pt-[68px] animate-in fade-in duration-500 flex flex-col h-full bg-[#7A61FE]">
         <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#7A61FE] flex justify-between items-center px-[20px] py-4 shadow-md">
           <div>
-            <Link to="/" className="text-3xl font-extrabold tracking-tight text-white flex items-center gap-2">
-              Quizz
+            <Link to="/" className="flex items-center gap-2">
+              <img src={quizLogo} alt="PlayQuiz" className="h-10 object-contain rounded-xl" />
             </Link>
           </div>
           <CoinBadge />

@@ -13,7 +13,7 @@ export function PromoCard() {
   const totalScore = parseInt(localStorage.getItem('last_quiz_score') || '0', 10);
   
   // Dummy rank since there is no backend leaderboards
-  const rank = totalCompleted > 0 ? Math.max(1, 100 - totalCompleted * 2) : '-';
+  const rank = totalQuestions === 0 ? '1000+' : (totalCompleted > 0 ? Math.max(1, 100 - totalCompleted * 2) : '1000+');
 
   return (
     <div className="px-[20px] mb-6 flex-shrink-0 relative z-10">

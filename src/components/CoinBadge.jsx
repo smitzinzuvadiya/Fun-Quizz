@@ -5,9 +5,10 @@ export function CoinBadge() {
   const { coins } = useCoins();
 
   return (
-    <div className="flex items-center gap-1.5 bg-secondary text-on-secondary-fixed font-bold px-3 py-1.5 rounded-full shadow-sm">
-      <CurrencyDollarIcon className="w-5 h-5 text-white" />
-      <span className="text-sm tracking-wide">{coins}</span>
+    <div className="flex items-center gap-1.5 bg-white text-black font-bold px-2   rounded-full shadow-sm">
+      <span className="text-sm tracking-wide flex justify-center  items-center ">
+        <span className='text-xl'>🪙</span> {coins}
+      </span>
     </div>
   );
 }

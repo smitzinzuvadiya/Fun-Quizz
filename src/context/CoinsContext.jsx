@@ -16,14 +16,27 @@ export function CoinsProvider({ children }) {
     return localStorage.getItem('quiz_seen_landing') === 'true';
   });
 
+  const [adsWatchedInLanding, setAdsWatchedInLanding] = useState(() => {
+    const saved = localStorage.getItem('quiz_ads_watched');
+    return saved !== null ? parseInt(saved, 10) : 0;
+  });
+
   useEffect(() => {
     localStorage.setItem('quiz_coins', coins.toString());
   }, [coins]);
 
-  const claimWelcomeBonus = () => {
-    setCoins((prev) => prev + 100);
+  const claimWelcomeBonus = (amount = 200) => {
+    setCoins((prev) => prev + amount);
     setHasClaimedBonus(true);
     localStorage.setItem('quiz_welcome_bonus_claimed', 'true');
+  };
+
+  const incrementAdsWatched = () => {
+    setAdsWatchedInLanding((prev) => {
+      const newVal = prev + 1;
+      localStorage.setItem('quiz_ads_watched', newVal.toString());
+      return newVal;
+    });
   };
 
   const markLandingSeen = () => {
@@ -40,7 +53,17 @@ export function CoinsProvider({ children }) {
   };
 
   return (
-    <CoinsContext.Provider value={{ coins, addCoins, spendCoins, hasClaimedBonus, claimWelcomeBonus, hasSeenLanding, markLandingSeen }}>
+    <CoinsContext.Provider value={{ 
+      coins, 
+      addCoins, 
+      spendCoins, 
+      hasClaimedBonus, 
+      claimWelcomeBonus, 
+      hasSeenLanding, 
+      markLandingSeen,
+      adsWatchedInLanding,
+      incrementAdsWatched
+    }}>
       {children}
     </CoinsContext.Provider>
   );

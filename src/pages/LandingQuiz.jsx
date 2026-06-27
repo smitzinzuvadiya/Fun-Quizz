@@ -9,7 +9,7 @@ import confetti from 'canvas-confetti';
 
 export function LandingQuiz() {
   const navigate = useNavigate();
-  const { markLandingSeen } = useCoins();
+  const { markLandingSeen, incrementAdsWatched } = useCoins();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showWrongPopup, setShowWrongPopup] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false);
@@ -67,6 +67,7 @@ export function LandingQuiz() {
 
   const handleAdClose = () => {
     setShowAdPopup(false);
+    incrementAdsWatched();
     proceedToNext();
   };
 

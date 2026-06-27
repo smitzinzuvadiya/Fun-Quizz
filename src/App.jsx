@@ -7,6 +7,8 @@ import { Settings } from './pages/Settings';
 import { Quiz } from './pages/Quiz';
 import { Welcome } from './pages/Welcome';
 import { LandingQuiz } from './pages/LandingQuiz';
+import { ContestRules } from './pages/ContestRules';
+import { TermsAndConditions } from './pages/TermsAndConditions';
 import { BottomNav } from './components/BottomNav';
 import { CoinsProvider } from './context/CoinsContext';
 import { SettingsProvider } from './context/SettingsContext';
@@ -45,6 +47,8 @@ function AppContent() {
           <Route path="/search" element={<ProtectedRoute><Search /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+          <Route path="/rules" element={<ProtectedRoute><ContestRules /></ProtectedRoute>} />
+          <Route path="/terms" element={<ProtectedRoute><TermsAndConditions /></ProtectedRoute>} />
           <Route path="/quiz/:categoryId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
         </Routes>
       </div>
@@ -63,7 +67,7 @@ function App() {
             
             {/* The App Container touching top and bottom */}
             <div 
-              className="relative w-full h-[100dvh] max-w-[410px] bg-background overflow-hidden flex flex-col shadow-2xl mx-auto"
+              className="relative w-full h-[100dvh] max-w-[430px] bg-background overflow-hidden flex flex-col shadow-2xl mx-auto"
               style={{ transform: 'translateZ(0)' }}
             >
               <AppContent />
