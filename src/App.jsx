@@ -59,7 +59,7 @@ function App() {
       <CoinsProvider>
         <Router>
           {/* Desktop wrapper with blurred backdrop to simulate mobile device */}
-          <div className="min-h-screen w-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-0">
+          <div className="h-[100dvh] w-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-0">
             
             {/* The App Container touching top and bottom */}
             <div 
