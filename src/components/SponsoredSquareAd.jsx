@@ -1,22 +1,30 @@
+import { useEffect } from 'react';
+
 export function SponsoredSquareAd() {
+  useEffect(() => {
+    try {
+      if (window.adsbygoogle) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    } catch (e) {
+      console.error("AdSense initialization error", e);
+    }
+  }, []);
+
   return (
     <div className="w-full flex flex-col items-center justify-center bg-transparent mb-6">
       <div className="w-full bg-transparent py-1 flex items-center justify-center">
         <span className="text-white/70 text-[10px] font-bold tracking-widest uppercase">Sponsored</span>
       </div>
 
-      {/* 
-        TODO: Replace the placeholder div below with your real ad code (e.g., Google AdSense <ins> tag) 
-        Example (Square / Rectangle Ad):
+      <div className="w-full mt-1 min-h-[250px] overflow-hidden flex justify-center">
+        {/* Quiz_NAT */}
         <ins className="adsbygoogle"
-             style={{ display: 'inline-block', width: '300px', height: '250px' }}
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      */}
-
-      <div className="w-full h-[250px] bg-white border border-white/50 flex flex-col items-center justify-center text-slate-800 shadow-sm mt-1 rounded-lg">
-        <span className="text-[10px] font-bold uppercase tracking-widest opacity-50">Advertisement</span>
+             style={{ display: 'block', width: '100%' }}
+             data-ad-client="ca-pub-1553074689080777"
+             data-ad-slot="9558391435"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
       </div>
     </div>
   );

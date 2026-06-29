@@ -11,6 +11,8 @@ import { PrizeRankPopup } from '../components/PrizeRankPopup';
 import { XMarkIcon, ArrowLeftIcon, BellIcon } from '@heroicons/react/24/outline';
 import { useRef } from 'react';
 import quizLogo from '../assets/quiz3.png';
+import { playRewardAd } from '../utils/adHelper';
+import { SponsoredSquareAd } from '../components/SponsoredSquareAd';
 
 export function Quiz() {
   const { categoryId } = useParams();
@@ -36,15 +38,24 @@ export function Quiz() {
   const [triggerFlip, setTriggerFlip] = useState(0);
   const [flippedQuestion, setFlippedQuestion] = useState(null);
   const [usedLifelines, setUsedLifelines] = useState(() => JSON.parse(sessionStorage.getItem(`quiz_lifelines_${categoryId}`) || '[]'));
+  const [isAdLoading, setIsAdLoading] = useState(false);
   const adOnCloseActionRef = useRef(null);
 
   const clearQuizSession = () => {
+    setIsStarted(false);
+    setCurrentQuestionIndex(0);
+    setCorrectAnswers(0);
+    setPoints(0);
+    setAnswerHistory([]);
+    setUsedLifelines([]);
+
     sessionStorage.removeItem(`quiz_active_${categoryId}`);
     sessionStorage.removeItem(`quiz_idx_${categoryId}`);
     sessionStorage.removeItem(`quiz_corr_${categoryId}`);
     sessionStorage.removeItem(`quiz_pts_${categoryId}`);
     sessionStorage.removeItem(`quiz_hist_${categoryId}`);
     sessionStorage.removeItem(`quiz_lifelines_${categoryId}`);
+    sessionStorage.removeItem(`quiz_shuffled_${categoryId}`);
   };
 
   useEffect(() => {
@@ -83,8 +94,18 @@ export function Quiz() {
   const handleUseLifeline = (type, method) => {
     if (type === '5050') {
       if (method === 'free') {
-        adOnCloseActionRef.current = 'apply_5050';
-        showAd();
+        if (isAdLoading) return;
+        setIsAdLoading(true);
+        playRewardAd({
+          adName: 'quiz_lifeline_5050',
+          onRewardGranted: () => {
+            setIsAdLoading(false);
+            setTrigger5050(prev => prev + 1);
+            setUsedLifelines(prev => [...prev, '5050']);
+          },
+          onAdDismissed: () => setIsAdLoading(false),
+          onAdError: () => setIsAdLoading(false)
+        });
       } else if (method === 'coins') {
         // Assume deduct coins logic here, for now just apply
         setTrigger5050(prev => prev + 1);
@@ -92,8 +113,18 @@ export function Quiz() {
       }
     } else if (type === 'audience') {
       if (method === 'free') {
-        adOnCloseActionRef.current = 'apply_audience';
-        showAd();
+        if (isAdLoading) return;
+        setIsAdLoading(true);
+        playRewardAd({
+          adName: 'quiz_lifeline_audience',
+          onRewardGranted: () => {
+            setIsAdLoading(false);
+            setTriggerAudience(prev => prev + 1);
+            setUsedLifelines(prev => [...prev, 'audience']);
+          },
+          onAdDismissed: () => setIsAdLoading(false),
+          onAdError: () => setIsAdLoading(false)
+        });
       } else if (method === 'coins') {
         // Assume deduct coins logic here, for now just apply
         setTriggerAudience(prev => prev + 1);
@@ -101,16 +132,36 @@ export function Quiz() {
       }
     } else if (type === 'freeze') {
       if (method === 'free') {
-        adOnCloseActionRef.current = 'apply_freeze';
-        showAd();
+        if (isAdLoading) return;
+        setIsAdLoading(true);
+        playRewardAd({
+          adName: 'quiz_lifeline_freeze',
+          onRewardGranted: () => {
+            setIsAdLoading(false);
+            setTriggerFreeze(prev => prev + 1);
+            setUsedLifelines(prev => [...prev, 'freeze']);
+          },
+          onAdDismissed: () => setIsAdLoading(false),
+          onAdError: () => setIsAdLoading(false)
+        });
       } else if (method === 'coins') {
         setTriggerFreeze(prev => prev + 1);
         setUsedLifelines(prev => [...prev, 'freeze']);
       }
     } else if (type === 'flip') {
       if (method === 'free') {
-        adOnCloseActionRef.current = 'apply_flip';
-        showAd();
+        if (isAdLoading) return;
+        setIsAdLoading(true);
+        playRewardAd({
+          adName: 'quiz_lifeline_flip',
+          onRewardGranted: () => {
+            setIsAdLoading(false);
+            setTriggerFlip(prev => prev + 1);
+            setUsedLifelines(prev => [...prev, 'flip']);
+          },
+          onAdDismissed: () => setIsAdLoading(false),
+          onAdError: () => setIsAdLoading(false)
+        });
       } else if (method === 'coins') {
         setTriggerFlip(prev => prev + 1);
         setUsedLifelines(prev => [...prev, 'flip']);
@@ -121,7 +172,14 @@ export function Quiz() {
   useEffect(() => {
     const foundCategory = quizData.categories.find((c) => c.id === categoryId);
     if (foundCategory) {
-      setCategory(foundCategory);
+      const storedShuffled = sessionStorage.getItem(`quiz_shuffled_${categoryId}`);
+      if (storedShuffled) {
+        setCategory({ ...foundCategory, questions: JSON.parse(storedShuffled) });
+      } else {
+        const shuffled = [...foundCategory.questions].sort(() => Math.random() - 0.5);
+        sessionStorage.setItem(`quiz_shuffled_${categoryId}`, JSON.stringify(shuffled));
+        setCategory({ ...foundCategory, questions: shuffled });
+      }
     } else {
       navigate('/promo-home');
     }
@@ -210,7 +268,7 @@ export function Quiz() {
   };
 
   const winAmount = category.name.length * 15000 + 50000;
-  const entryFee = category.name.length * 5;
+  const entryFee = category.entryFee || (category.name.length * 5);
 
   const handleStartQuiz = () => {
     if (coins >= entryFee) {
@@ -299,8 +357,7 @@ export function Quiz() {
             <div className="flex flex-col items-center justify-center w-[calc(100%+24px)] -mx-3 my-auto min-h-[250px]">
               {/* TODO: Insert your ad code in this space */}
               <div className="w-full h-full min-h-[250px] flex flex-col items-center justify-center bg-gray-50/50">
-                <span className="text-gray-400 text-sm font-medium uppercase tracking-wider">Ad Space</span>
-                <span className="text-gray-300 text-xs mt-1">Insert code here</span>
+                <SponsoredSquareAd />
               </div>
             </div>
 
@@ -344,9 +401,18 @@ export function Quiz() {
 
                 <button
                   onClick={() => {
+                    if (isAdLoading) return;
+                    setIsAdLoading(true);
                     setShowNotEnoughCoinsPopup(false);
-                    adOnCloseActionRef.current = 'claim_free_coins_200';
-                    showAd();
+                    playRewardAd({
+                      adName: 'quiz_claim_200',
+                      onRewardGranted: () => {
+                        setIsAdLoading(false);
+                        addCoins(200);
+                      },
+                      onAdDismissed: () => setIsAdLoading(false),
+                      onAdError: () => setIsAdLoading(false)
+                    });
                   }}
                   className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-white font-black text-[18px] py-3.5 px-6 rounded-xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95"
                 >
@@ -364,15 +430,7 @@ export function Quiz() {
   }
 
   return (
-    <div className="pt-[68px] h-full flex flex-col px-[8px] pb-6 animate-in slide-in-from-right duration-300 relative overflow-y-auto overflow-x-hidden no-scrollbar bg-[#7A61FE]">
-      <header className="fixed top-0 left-0 right-0 w-full z-[100] bg-[#7A61FE] flex justify-between items-center px-[20px] py-4 shadow-md">
-        <div className="flex items-center gap-1">
-          <span className="flex items-center gap-2">
-            <img src={quizLogo} alt="PlayQuiz" className="h-10 object-contain rounded-xl" />
-          </span>
-        </div>
-        <CoinBadge />
-      </header>
+    <div className="pt-6 h-full flex flex-col px-[8px] pb-6 animate-in slide-in-from-right duration-300 relative overflow-y-auto overflow-x-hidden no-scrollbar bg-[#7A61FE]">
 
       {/* Background decorations for active quiz */}
       <div className="absolute top-[-50px] right-[-50px] w-[300px] h-[300px] rounded-full border-[1.5px] border-white/10 pointer-events-none z-0"></div>
@@ -474,8 +532,17 @@ export function Quiz() {
                     adOnCloseActionRef.current = 'home';
                     showAd();
                   } else {
-                    adOnCloseActionRef.current = 'add_time_and_continue';
-                    showAd();
+                    if (isAdLoading) return;
+                    setIsAdLoading(true);
+                    playRewardAd({
+                      adName: 'quiz_extra_time',
+                      onRewardGranted: () => {
+                        setIsAdLoading(false);
+                        setExtraTimeCounter(prev => prev + 1);
+                      },
+                      onAdDismissed: () => setIsAdLoading(false),
+                      onAdError: () => setIsAdLoading(false)
+                    });
                   }
                 }}
                 className="w-full max-w-[240px] bg-[#F59E0B] hover:bg-[#D97706] text-white font-black text-[22px] py-4 px-6 rounded-full shadow-lg flex items-center justify-center gap-3 transition-transform active:scale-95 mb-6"

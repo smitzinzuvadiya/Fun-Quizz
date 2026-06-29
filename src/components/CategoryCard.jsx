@@ -5,7 +5,7 @@ export function CategoryCard({ category }) {
   // Generate stable numbers based on category name length
   const winAmount = category.name.length * 15000 + 50000;
   const usersPlaying = category.name.length * 400 + 1200;
-  const entryFee = category.name.length * 5;
+  const entryFee = category.entryFee || (category.name.length * 5);
 
   return (
     <div className="bg-white rounded-[24px] p-3.5 shadow-sm border border-transparent flex gap-3.5 relative overflow-hidden">

@@ -8,6 +8,7 @@ import quizData from '../data/quizData.json';
 import { useAds } from '../hooks/useAds';
 
 import { PromoCard } from '../components/PromoCard';
+import { SponsoredSquareAd } from '../components/SponsoredSquareAd';
 
 export function PromoHome() {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -22,7 +23,7 @@ export function PromoHome() {
   return (
     <>
       <AdPopup isOpen={shouldShowAd} onClose={dismissAd} />
-      <div className="pt-[68px] animate-in fade-in duration-500 flex flex-col h-full bg-[#7A61FE]">
+      <div className="pt-[68px] animate-in fade-in duration-500 flex flex-col h-full bg-[#7A61FE] overflow-y-auto no-scrollbar">
         <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#7A61FE] flex justify-between items-center px-[20px] py-4 shadow-md">
           <div>
             <Link to="/" className="flex items-center gap-2">
@@ -32,28 +33,19 @@ export function PromoHome() {
           <CoinBadge />
         </header>
 
-        <PromoCard />
+        <div className="flex-shrink-0">
+          <PromoCard />
+        </div>
 
         {/* Ad Placement Container */}
         <div className="w-full mb-6 flex justify-center flex-shrink-0">
           <div className="w-full min-h-[250px] bg-white/10 flex flex-col items-center justify-center text-white/60 shadow-inner relative overflow-hidden p-4">
-            <span className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-2">Advertisement</span>
-            {/* 
-              TODO: Insert your Ad code here 
-              Example:
-              <ins className="adsbygoogle"
-                   style={{ display: 'block', width: '100%', height: '250px' }}
-                   data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                   data-ad-slot="XXXXXXXXXX"
-                   data-ad-format="rectangle"
-                   data-full-width-responsive="true"></ins>
-            */}
-            <span className="text-xs mt-auto">Ad Space (Responsive Square)</span>
+            <SponsoredSquareAd />
           </div>
         </div>
 
         {/* Dark Purple Container for Contests */}
-        <div className="flex-1 bg-[#5b21b6] rounded-t-[32px] pt-6 flex flex-col relative shadow-[0_-8px_30px_-15px_rgba(0,0,0,0.3)]">
+        <div className="w-full bg-[#5b21b6] rounded-t-[32px] pt-6 flex flex-col relative shadow-[0_-8px_30px_-15px_rgba(0,0,0,0.3)] flex-grow pb-6">
           {/* Top Notch Decor */}
           <div className="absolute top-[-8px] left-1/2 transform -translate-x-1/2 w-16 h-4 bg-[#5b21b6] rounded-t-[20px]">
             <div className="w-2 h-2 rounded-full bg-white/20 mx-auto mt-1"></div>
@@ -75,7 +67,7 @@ export function PromoHome() {
             ))}
           </div>
 
-          <main className="flex-1 flex flex-col gap-4 px-[20px] pb-6 overflow-y-auto">
+          <main className="w-full flex flex-col gap-4 px-[20px]">
             {filteredCategories.length > 0 ? (
               filteredCategories.map(category => (
                 <CategoryCard key={category.id} category={category} />

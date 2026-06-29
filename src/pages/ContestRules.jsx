@@ -8,7 +8,7 @@ export function ContestRules() {
   const navigate = useNavigate();
 
   return (
-    <div className="pt-[68px] h-full w-full flex flex-col bg-[#7A61FE] animate-in fade-in duration-500 overflow-hidden relative">
+    <div className="pt-[68px] h-full w-full bg-[#7A61FE] animate-in fade-in duration-500 overflow-y-auto no-scrollbar relative">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#7A61FE] flex justify-between items-center px-[20px] py-4 shadow-md">
         <div className="flex items-center gap-2">
@@ -27,7 +27,7 @@ export function ContestRules() {
       </header>
 
       {/* Scrollable Content */}
-      <div className="flex-1 overflow-y-auto no-scrollbar pb-8 pt-4">
+      <div className="pb-8 pt-4">
         <div className="relative z-10 flex flex-col w-full max-w-md mx-auto space-y-6 px-4">
 
           {/* Rules Card */}

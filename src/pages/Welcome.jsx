@@ -4,6 +4,7 @@ import { useCoins } from '../hooks/useCoins';
 import { AdPopup } from '../components/AdPopup';
 import { SponsoredSquareAd } from '../components/SponsoredSquareAd';
 import confetti from 'canvas-confetti';
+import { playRewardAd } from '../utils/adHelper';
 
 export function Welcome() {
   const navigate = useNavigate();
@@ -13,7 +14,12 @@ export function Welcome() {
   // Compute bonus amount: base 200 + 100 per ad watched in landing page
   const bonusAmount = 200 + (adsWatchedInLanding * 100);
 
+  const [isAdLoading, setIsAdLoading] = useState(false);
+
   const handleGetStarted = () => {
+    if (isAdLoading) return;
+    setIsAdLoading(true);
+
     claimWelcomeBonus(bonusAmount);
     confetti({
       particleCount: 150,
@@ -21,7 +27,22 @@ export function Welcome() {
       origin: { y: 0.6 },
       colors: ['#6D28D9', '#FBBF24', '#F97316']
     });
-    setShowAd(true);
+    
+    playRewardAd({
+      adName: "welcome_play_now",
+      onRewardGranted: () => {
+        setIsAdLoading(false);
+        navigate('/');
+      },
+      onAdDismissed: () => {
+        setIsAdLoading(false);
+        navigate('/');
+      },
+      onAdError: () => {
+        setIsAdLoading(false);
+        navigate('/');
+      }
+    });
   };
 
   const handleAdClose = () => {
@@ -67,9 +88,10 @@ export function Welcome() {
 
             <button
               onClick={handleGetStarted}
-              className="w-full bg-[#5b3eb8] text-white font-bold text-[18px] py-4 rounded-full shadow-md hover:bg-[#4b35b5] active:scale-[0.98] transition-all tracking-wide"
+              disabled={isAdLoading}
+              className="w-full bg-[#5b3eb8] text-white font-bold text-[18px] py-4 rounded-full shadow-md hover:bg-[#4b35b5] active:scale-[0.98] transition-all tracking-wide disabled:opacity-70"
             >
-              Play Now
+              {isAdLoading ? "Loading Ad..." : "Play Now"}
             </button>
           </div>
 

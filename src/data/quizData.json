@@ -1,21 +1,122 @@
 {
   "categories": [
     {
-      "id": "cricket",
-      "name": "Cricket",
-      "icon": "🏏",
+      "id": "sport",
+      "name": "Sport",
+      "icon": "⚽",
       "color": "bg-blue-100",
+      "entryFee": 50,
       "questions": [
-        { "id": 1, "question": "Which country won the first Cricket World Cup in 1975?", "options": ["India", "West Indies", "Australia", "England"], "correctAnswer": "West Indies" },
-        { "id": 2, "question": "Who has scored the highest individual score in an ODI?", "options": ["Rohit Sharma", "Martin Guptill", "Virender Sehwag", "Chris Gayle"], "correctAnswer": "Rohit Sharma" },
-        { "id": 3, "question": "What is the maximum number of overs a bowler can bowl in an ODI match?", "options": ["10", "12", "15", "20"], "correctAnswer": "10" },
-        { "id": 4, "question": "Which bowler has taken the most wickets in Test cricket history?", "options": ["Shane Warne", "Muttiah Muralitharan", "James Anderson", "Anil Kumble"], "correctAnswer": "Muttiah Muralitharan" },
-        { "id": 5, "question": "Who was the first batsman to score 10,000 runs in Test cricket?", "options": ["Sunil Gavaskar", "Brian Lara", "Sachin Tendulkar", "Allan Border"], "correctAnswer": "Sunil Gavaskar" },
-        { "id": 6, "question": "Which team has won the most ICC Men's Cricket World Cups?", "options": ["India", "Australia", "West Indies", "England"], "correctAnswer": "Australia" },
-        { "id": 7, "question": "What is the length of a cricket pitch?", "options": ["20 yards", "22 yards", "24 yards", "26 yards"], "correctAnswer": "22 yards" },
-        { "id": 8, "question": "Who holds the record for the fastest century in ODI cricket?", "options": ["Shahid Afridi", "Corey Anderson", "AB de Villiers", "Chris Gayle"], "correctAnswer": "AB de Villiers" },
-        { "id": 9, "question": "Which format of cricket is played in the 'Ashes' series?", "options": ["ODI", "T20", "Test", "T10"], "correctAnswer": "Test" },
-        { "id": 10, "question": "In cricket, how many bails are placed on top of the stumps?", "options": ["1", "2", "3", "4"], "correctAnswer": "2" }
+        {
+          "id": 1,
+          "question": "Which country won the first Cricket World Cup in 1975?",
+          "options": [
+            "India",
+            "West Indies",
+            "Australia",
+            "England"
+          ],
+          "correctAnswer": "West Indies"
+        },
+        {
+          "id": 2,
+          "question": "Who has scored the highest individual score in an ODI?",
+          "options": [
+            "Rohit Sharma",
+            "Martin Guptill",
+            "Virender Sehwag",
+            "Chris Gayle"
+          ],
+          "correctAnswer": "Rohit Sharma"
+        },
+        {
+          "id": 3,
+          "question": "What is the maximum number of overs a bowler can bowl in an ODI match?",
+          "options": [
+            "10",
+            "12",
+            "15",
+            "20"
+          ],
+          "correctAnswer": "10"
+        },
+        {
+          "id": 4,
+          "question": "Which bowler has taken the most wickets in Test cricket history?",
+          "options": [
+            "Shane Warne",
+            "Muttiah Muralitharan",
+            "James Anderson",
+            "Anil Kumble"
+          ],
+          "correctAnswer": "Muttiah Muralitharan"
+        },
+        {
+          "id": 5,
+          "question": "Who was the first batsman to score 10,000 runs in Test cricket?",
+          "options": [
+            "Sunil Gavaskar",
+            "Brian Lara",
+            "Sachin Tendulkar",
+            "Allan Border"
+          ],
+          "correctAnswer": "Sunil Gavaskar"
+        },
+        {
+          "id": 6,
+          "question": "Which country won the FIFA World Cup in 2022?",
+          "options": [
+            "France",
+            "Brazil",
+            "Argentina",
+            "Germany"
+          ],
+          "correctAnswer": "Argentina"
+        },
+        {
+          "id": 7,
+          "question": "Who has won the most Ballon d'Or awards in football?",
+          "options": [
+            "Cristiano Ronaldo",
+            "Lionel Messi",
+            "Michel Platini",
+            "Johan Cruyff"
+          ],
+          "correctAnswer": "Lionel Messi"
+        },
+        {
+          "id": 8,
+          "question": "Which club has won the most UEFA Champions League titles?",
+          "options": [
+            "Barcelona",
+            "Bayern Munich",
+            "AC Milan",
+            "Real Madrid"
+          ],
+          "correctAnswer": "Real Madrid"
+        },
+        {
+          "id": 9,
+          "question": "What is the standard duration of a football match (excluding extra time)?",
+          "options": [
+            "80 minutes",
+            "90 minutes",
+            "100 minutes",
+            "120 minutes"
+          ],
+          "correctAnswer": "90 minutes"
+        },
+        {
+          "id": 10,
+          "question": "Which country has won the most FIFA World Cups?",
+          "options": [
+            "Germany",
+            "Italy",
+            "Argentina",
+            "Brazil"
+          ],
+          "correctAnswer": "Brazil"
+        }
       ]
     },
     {
@@ -24,16 +125,116 @@
       "icon": "🧠",
       "color": "bg-purple-100",
       "questions": [
-        { "id": 11, "question": "What is the capital of Japan?", "options": ["Seoul", "Beijing", "Tokyo", "Bangkok"], "correctAnswer": "Tokyo" },
-        { "id": 12, "question": "Who painted the Mona Lisa?", "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"], "correctAnswer": "Leonardo da Vinci" },
-        { "id": 13, "question": "Which is the largest ocean on Earth?", "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], "correctAnswer": "Pacific Ocean" },
-        { "id": 14, "question": "What is the chemical symbol for gold?", "options": ["Au", "Ag", "Fe", "Cu"], "correctAnswer": "Au" },
-        { "id": 15, "question": "How many continents are there?", "options": ["5", "6", "7", "8"], "correctAnswer": "7" },
-        { "id": 16, "question": "Who wrote 'Romeo and Juliet'?", "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"], "correctAnswer": "William Shakespeare" },
-        { "id": 17, "question": "What is the hardest natural substance on Earth?", "options": ["Gold", "Iron", "Diamond", "Platinum"], "correctAnswer": "Diamond" },
-        { "id": 18, "question": "Which planet is known as the Red Planet?", "options": ["Venus", "Mars", "Jupiter", "Saturn"], "correctAnswer": "Mars" },
-        { "id": 19, "question": "What is the largest organ in the human body?", "options": ["Heart", "Liver", "Skin", "Brain"], "correctAnswer": "Skin" },
-        { "id": 20, "question": "Who was the first person to walk on the moon?", "options": ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "Michael Collins"], "correctAnswer": "Neil Armstrong" }
+        {
+          "id": 11,
+          "question": "What is the capital of Japan?",
+          "options": [
+            "Seoul",
+            "Beijing",
+            "Tokyo",
+            "Bangkok"
+          ],
+          "correctAnswer": "Tokyo"
+        },
+        {
+          "id": 12,
+          "question": "Who painted the Mona Lisa?",
+          "options": [
+            "Vincent van Gogh",
+            "Pablo Picasso",
+            "Leonardo da Vinci",
+            "Claude Monet"
+          ],
+          "correctAnswer": "Leonardo da Vinci"
+        },
+        {
+          "id": 13,
+          "question": "Which is the largest ocean on Earth?",
+          "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+          ],
+          "correctAnswer": "Pacific Ocean"
+        },
+        {
+          "id": 14,
+          "question": "What is the chemical symbol for gold?",
+          "options": [
+            "Au",
+            "Ag",
+            "Fe",
+            "Cu"
+          ],
+          "correctAnswer": "Au"
+        },
+        {
+          "id": 15,
+          "question": "How many continents are there?",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "correctAnswer": "7"
+        },
+        {
+          "id": 16,
+          "question": "Who wrote 'Romeo and Juliet'?",
+          "options": [
+            "Charles Dickens",
+            "William Shakespeare",
+            "Jane Austen",
+            "Mark Twain"
+          ],
+          "correctAnswer": "William Shakespeare"
+        },
+        {
+          "id": 17,
+          "question": "What is the hardest natural substance on Earth?",
+          "options": [
+            "Gold",
+            "Iron",
+            "Diamond",
+            "Platinum"
+          ],
+          "correctAnswer": "Diamond"
+        },
+        {
+          "id": 18,
+          "question": "Which planet is known as the Red Planet?",
+          "options": [
+            "Venus",
+            "Mars",
+            "Jupiter",
+            "Saturn"
+          ],
+          "correctAnswer": "Mars"
+        },
+        {
+          "id": 19,
+          "question": "What is the largest organ in the human body?",
+          "options": [
+            "Heart",
+            "Liver",
+            "Skin",
+            "Brain"
+          ],
+          "correctAnswer": "Skin"
+        },
+        {
+          "id": 20,
+          "question": "Who was the first person to walk on the moon?",
+          "options": [
+            "Buzz Aldrin",
+            "Yuri Gagarin",
+            "Neil Armstrong",
+            "Michael Collins"
+          ],
+          "correctAnswer": "Neil Armstrong"
+        }
       ]
     },
     {
@@ -42,16 +243,116 @@
       "icon": "💡",
       "color": "bg-yellow-100",
       "questions": [
-        { "id": 21, "question": "What animal is known to have fingerprints almost indistinguishable from humans?", "options": ["Chimpanzee", "Koala", "Gorilla", "Orangutan"], "correctAnswer": "Koala" },
-        { "id": 22, "question": "A group of crows is called what?", "options": ["A flock", "A murder", "A herd", "A pack"], "correctAnswer": "A murder" },
-        { "id": 23, "question": "Which food never goes bad?", "options": ["Honey", "Rice", "Beans", "Salt"], "correctAnswer": "Honey" },
-        { "id": 24, "question": "How many noses does a slug have?", "options": ["1", "2", "3", "4"], "correctAnswer": "4" },
-        { "id": 25, "question": "What is the fear of long words called?", "options": ["Arachnophobia", "Hippopotomonstrosesquippedaliophobia", "Acrophobia", "Claustrophobia"], "correctAnswer": "Hippopotomonstrosesquippedaliophobia" },
-        { "id": 26, "question": "Which letter does not appear in any U.S. state name?", "options": ["Q", "Z", "J", "X"], "correctAnswer": "Q" },
-        { "id": 27, "question": "What color is hippopotamus sweat?", "options": ["Clear", "Red", "Blue", "Green"], "correctAnswer": "Red" },
-        { "id": 28, "question": "How many days can a snail sleep?", "options": ["10 days", "30 days", "1 year", "3 years"], "correctAnswer": "3 years" },
-        { "id": 29, "question": "What is the only mammal that can truly fly?", "options": ["Flying squirrel", "Bat", "Lemur", "Glider"], "correctAnswer": "Bat" },
-        { "id": 30, "question": "A jiffy is an actual unit of time. How long is it?", "options": ["One second", "One millisecond", "1/100th of a second", "One minute"], "correctAnswer": "1/100th of a second" }
+        {
+          "id": 21,
+          "question": "What animal is known to have fingerprints almost indistinguishable from humans?",
+          "options": [
+            "Chimpanzee",
+            "Koala",
+            "Gorilla",
+            "Orangutan"
+          ],
+          "correctAnswer": "Koala"
+        },
+        {
+          "id": 22,
+          "question": "A group of crows is called what?",
+          "options": [
+            "A flock",
+            "A murder",
+            "A herd",
+            "A pack"
+          ],
+          "correctAnswer": "A murder"
+        },
+        {
+          "id": 23,
+          "question": "Which food never goes bad?",
+          "options": [
+            "Honey",
+            "Rice",
+            "Beans",
+            "Salt"
+          ],
+          "correctAnswer": "Honey"
+        },
+        {
+          "id": 24,
+          "question": "How many noses does a slug have?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctAnswer": "4"
+        },
+        {
+          "id": 25,
+          "question": "What is the fear of long words called?",
+          "options": [
+            "Arachnophobia",
+            "Hippopotomonstrosesquippedaliophobia",
+            "Acrophobia",
+            "Claustrophobia"
+          ],
+          "correctAnswer": "Hippopotomonstrosesquippedaliophobia"
+        },
+        {
+          "id": 26,
+          "question": "Which letter does not appear in any U.S. state name?",
+          "options": [
+            "Q",
+            "Z",
+            "J",
+            "X"
+          ],
+          "correctAnswer": "Q"
+        },
+        {
+          "id": 27,
+          "question": "What color is hippopotamus sweat?",
+          "options": [
+            "Clear",
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "correctAnswer": "Red"
+        },
+        {
+          "id": 28,
+          "question": "How many days can a snail sleep?",
+          "options": [
+            "10 days",
+            "30 days",
+            "1 year",
+            "3 years"
+          ],
+          "correctAnswer": "3 years"
+        },
+        {
+          "id": 29,
+          "question": "What is the only mammal that can truly fly?",
+          "options": [
+            "Flying squirrel",
+            "Bat",
+            "Lemur",
+            "Glider"
+          ],
+          "correctAnswer": "Bat"
+        },
+        {
+          "id": 30,
+          "question": "A jiffy is an actual unit of time. How long is it?",
+          "options": [
+            "One second",
+            "One millisecond",
+            "1/100th of a second",
+            "One minute"
+          ],
+          "correctAnswer": "1/100th of a second"
+        }
       ]
     },
     {
@@ -60,16 +361,116 @@
       "icon": "🎬",
       "color": "bg-red-100",
       "questions": [
-        { "id": 31, "question": "Who directed the movie 'Inception'?", "options": ["Steven Spielberg", "Christopher Nolan", "Quentin Tarantino", "Martin Scorsese"], "correctAnswer": "Christopher Nolan" },
-        { "id": 32, "question": "What is the highest-grossing film of all time?", "options": ["Avatar", "Avengers: Endgame", "Titanic", "Star Wars: The Force Awakens"], "correctAnswer": "Avatar" },
-        { "id": 33, "question": "Which actor played Iron Man in the Marvel Cinematic Universe?", "options": ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr.", "Mark Ruffalo"], "correctAnswer": "Robert Downey Jr." },
-        { "id": 34, "question": "In 'The Matrix', what color pill does Neo take?", "options": ["Red", "Blue", "Green", "Yellow"], "correctAnswer": "Red" },
-        { "id": 35, "question": "What animated film features a character named Simba?", "options": ["Aladdin", "The Lion King", "Mulan", "Tarzan"], "correctAnswer": "The Lion King" },
-        { "id": 36, "question": "Who played Jack in Titanic?", "options": ["Brad Pitt", "Tom Cruise", "Leonardo DiCaprio", "Johnny Depp"], "correctAnswer": "Leonardo DiCaprio" },
-        { "id": 37, "question": "Which movie features the quote 'May the Force be with you'?", "options": ["Star Trek", "Star Wars", "Harry Potter", "The Lord of the Rings"], "correctAnswer": "Star Wars" },
-        { "id": 38, "question": "What is the name of the hobbit played by Elijah Wood in The Lord of the Rings?", "options": ["Samwise Gamgee", "Bilbo Baggins", "Frodo Baggins", "Pippin Took"], "correctAnswer": "Frodo Baggins" },
-        { "id": 39, "question": "Who played the Joker in 'The Dark Knight'?", "options": ["Jack Nicholson", "Jared Leto", "Heath Ledger", "Joaquin Phoenix"], "correctAnswer": "Heath Ledger" },
-        { "id": 40, "question": "Which movie won the first Academy Award for Best Picture?", "options": ["Wings", "Sunrise", "The Jazz Singer", "Metropolis"], "correctAnswer": "Wings" }
+        {
+          "id": 31,
+          "question": "Who directed the movie 'Inception'?",
+          "options": [
+            "Steven Spielberg",
+            "Christopher Nolan",
+            "Quentin Tarantino",
+            "Martin Scorsese"
+          ],
+          "correctAnswer": "Christopher Nolan"
+        },
+        {
+          "id": 32,
+          "question": "What is the highest-grossing film of all time?",
+          "options": [
+            "Avatar",
+            "Avengers: Endgame",
+            "Titanic",
+            "Star Wars: The Force Awakens"
+          ],
+          "correctAnswer": "Avatar"
+        },
+        {
+          "id": 33,
+          "question": "Which actor played Iron Man in the Marvel Cinematic Universe?",
+          "options": [
+            "Chris Evans",
+            "Chris Hemsworth",
+            "Robert Downey Jr.",
+            "Mark Ruffalo"
+          ],
+          "correctAnswer": "Robert Downey Jr."
+        },
+        {
+          "id": 34,
+          "question": "In 'The Matrix', what color pill does Neo take?",
+          "options": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow"
+          ],
+          "correctAnswer": "Red"
+        },
+        {
+          "id": 35,
+          "question": "What animated film features a character named Simba?",
+          "options": [
+            "Aladdin",
+            "The Lion King",
+            "Mulan",
+            "Tarzan"
+          ],
+          "correctAnswer": "The Lion King"
+        },
+        {
+          "id": 36,
+          "question": "Who played Jack in Titanic?",
+          "options": [
+            "Brad Pitt",
+            "Tom Cruise",
+            "Leonardo DiCaprio",
+            "Johnny Depp"
+          ],
+          "correctAnswer": "Leonardo DiCaprio"
+        },
+        {
+          "id": 37,
+          "question": "Which movie features the quote 'May the Force be with you'?",
+          "options": [
+            "Star Trek",
+            "Star Wars",
+            "Harry Potter",
+            "The Lord of the Rings"
+          ],
+          "correctAnswer": "Star Wars"
+        },
+        {
+          "id": 38,
+          "question": "What is the name of the hobbit played by Elijah Wood in The Lord of the Rings?",
+          "options": [
+            "Samwise Gamgee",
+            "Bilbo Baggins",
+            "Frodo Baggins",
+            "Pippin Took"
+          ],
+          "correctAnswer": "Frodo Baggins"
+        },
+        {
+          "id": 39,
+          "question": "Who played the Joker in 'The Dark Knight'?",
+          "options": [
+            "Jack Nicholson",
+            "Jared Leto",
+            "Heath Ledger",
+            "Joaquin Phoenix"
+          ],
+          "correctAnswer": "Heath Ledger"
+        },
+        {
+          "id": 40,
+          "question": "Which movie won the first Academy Award for Best Picture?",
+          "options": [
+            "Wings",
+            "Sunrise",
+            "The Jazz Singer",
+            "Metropolis"
+          ],
+          "correctAnswer": "Wings"
+        }
       ]
     },
     {
@@ -78,16 +479,116 @@
       "icon": "🔬",
       "color": "bg-green-100",
       "questions": [
-        { "id": 41, "question": "What is the speed of light?", "options": ["300,000 km/s", "150,000 km/s", "1,000,000 km/s", "10,000 km/s"], "correctAnswer": "300,000 km/s" },
-        { "id": 42, "question": "What is the main gas found in the Earth's atmosphere?", "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"], "correctAnswer": "Nitrogen" },
-        { "id": 43, "question": "What is the chemical formula for water?", "options": ["CO2", "H2O", "O2", "NaCl"], "correctAnswer": "H2O" },
-        { "id": 44, "question": "Who developed the theory of relativity?", "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"], "correctAnswer": "Albert Einstein" },
-        { "id": 45, "question": "What part of the plant conducts photosynthesis?", "options": ["Root", "Stem", "Leaf", "Flower"], "correctAnswer": "Leaf" },
-        { "id": 46, "question": "What is the center of an atom called?", "options": ["Electron", "Proton", "Nucleus", "Neutron"], "correctAnswer": "Nucleus" },
-        { "id": 47, "question": "Which of these is a noble gas?", "options": ["Oxygen", "Helium", "Nitrogen", "Carbon"], "correctAnswer": "Helium" },
-        { "id": 48, "question": "What force keeps the planets in orbit around the sun?", "options": ["Magnetism", "Friction", "Gravity", "Tension"], "correctAnswer": "Gravity" },
-        { "id": 49, "question": "What is the study of fossils called?", "options": ["Biology", "Geology", "Paleontology", "Archaeology"], "correctAnswer": "Paleontology" },
-        { "id": 50, "question": "What is the unit of electrical resistance?", "options": ["Volt", "Ampere", "Ohm", "Watt"], "correctAnswer": "Ohm" }
+        {
+          "id": 41,
+          "question": "What is the speed of light?",
+          "options": [
+            "300,000 km/s",
+            "150,000 km/s",
+            "1,000,000 km/s",
+            "10,000 km/s"
+          ],
+          "correctAnswer": "300,000 km/s"
+        },
+        {
+          "id": 42,
+          "question": "What is the main gas found in the Earth's atmosphere?",
+          "options": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Hydrogen"
+          ],
+          "correctAnswer": "Nitrogen"
+        },
+        {
+          "id": 43,
+          "question": "What is the chemical formula for water?",
+          "options": [
+            "CO2",
+            "H2O",
+            "O2",
+            "NaCl"
+          ],
+          "correctAnswer": "H2O"
+        },
+        {
+          "id": 44,
+          "question": "Who developed the theory of relativity?",
+          "options": [
+            "Isaac Newton",
+            "Albert Einstein",
+            "Galileo Galilei",
+            "Nikola Tesla"
+          ],
+          "correctAnswer": "Albert Einstein"
+        },
+        {
+          "id": 45,
+          "question": "What part of the plant conducts photosynthesis?",
+          "options": [
+            "Root",
+            "Stem",
+            "Leaf",
+            "Flower"
+          ],
+          "correctAnswer": "Leaf"
+        },
+        {
+          "id": 46,
+          "question": "What is the center of an atom called?",
+          "options": [
+            "Electron",
+            "Proton",
+            "Nucleus",
+            "Neutron"
+          ],
+          "correctAnswer": "Nucleus"
+        },
+        {
+          "id": 47,
+          "question": "Which of these is a noble gas?",
+          "options": [
+            "Oxygen",
+            "Helium",
+            "Nitrogen",
+            "Carbon"
+          ],
+          "correctAnswer": "Helium"
+        },
+        {
+          "id": 48,
+          "question": "What force keeps the planets in orbit around the sun?",
+          "options": [
+            "Magnetism",
+            "Friction",
+            "Gravity",
+            "Tension"
+          ],
+          "correctAnswer": "Gravity"
+        },
+        {
+          "id": 49,
+          "question": "What is the study of fossils called?",
+          "options": [
+            "Biology",
+            "Geology",
+            "Paleontology",
+            "Archaeology"
+          ],
+          "correctAnswer": "Paleontology"
+        },
+        {
+          "id": 50,
+          "question": "What is the unit of electrical resistance?",
+          "options": [
+            "Volt",
+            "Ampere",
+            "Ohm",
+            "Watt"
+          ],
+          "correctAnswer": "Ohm"
+        }
       ]
     },
     {
@@ -96,34 +597,116 @@
       "icon": "📜",
       "color": "bg-orange-100",
       "questions": [
-        { "id": 51, "question": "In what year did World War II end?", "options": ["1943", "1945", "1947", "1950"], "correctAnswer": "1945" },
-        { "id": 52, "question": "Who was the first President of the United States?", "options": ["Abraham Lincoln", "Thomas Jefferson", "George Washington", "John Adams"], "correctAnswer": "George Washington" },
-        { "id": 53, "question": "Which ancient civilization built the pyramids at Giza?", "options": ["Romans", "Greeks", "Mayans", "Egyptians"], "correctAnswer": "Egyptians" },
-        { "id": 54, "question": "Who was the Queen of the United Kingdom for over 70 years?", "options": ["Queen Victoria", "Queen Elizabeth I", "Queen Elizabeth II", "Queen Mary"], "correctAnswer": "Queen Elizabeth II" },
-        { "id": 55, "question": "What wall was torn down in 1989?", "options": ["Great Wall of China", "Berlin Wall", "Hadrian's Wall", "Western Wall"], "correctAnswer": "Berlin Wall" },
-        { "id": 56, "question": "Who was the leader of the Soviet Union during World War II?", "options": ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Mikhail Gorbachev"], "correctAnswer": "Joseph Stalin" },
-        { "id": 57, "question": "In which century did the Renaissance begin?", "options": ["13th Century", "14th Century", "15th Century", "16th Century"], "correctAnswer": "14th Century" },
-        { "id": 58, "question": "Who discovered America in 1492?", "options": ["Ferdinand Magellan", "Christopher Columbus", "Vasco da Gama", "Marco Polo"], "correctAnswer": "Christopher Columbus" },
-        { "id": 59, "question": "What was the name of the ship on which the Pilgrims traveled to North America?", "options": ["Santa Maria", "Mayflower", "Beagle", "Endeavour"], "correctAnswer": "Mayflower" },
-        { "id": 60, "question": "Which empire was ruled by Julius Caesar?", "options": ["Ottoman Empire", "British Empire", "Roman Empire", "Mongol Empire"], "correctAnswer": "Roman Empire" }
-      ]
-    },
-    {
-      "id": "sports",
-      "name": "Sports",
-      "icon": "🏆",
-      "color": "bg-emerald-100",
-      "questions": [
-        { "id": 61, "question": "How often are the Summer Olympic Games held?", "options": ["Every 2 years", "Every 4 years", "Every 5 years", "Every 10 years"], "correctAnswer": "Every 4 years" },
-        { "id": 62, "question": "In which sport would you perform a slam dunk?", "options": ["Football", "Tennis", "Basketball", "Volleyball"], "correctAnswer": "Basketball" },
-        { "id": 63, "question": "Who holds the world record for the men's 100m sprint?", "options": ["Carl Lewis", "Tyson Gay", "Usain Bolt", "Justin Gatlin"], "correctAnswer": "Usain Bolt" },
-        { "id": 64, "question": "Which country won the FIFA World Cup in 2022?", "options": ["France", "Brazil", "Argentina", "Germany"], "correctAnswer": "Argentina" },
-        { "id": 65, "question": "What is the highest score possible in a single frame of bowling?", "options": ["10", "30", "100", "300"], "correctAnswer": "30" },
-        { "id": 66, "question": "In tennis, what piece of fruit is found at the top of the men's Wimbledon trophy?", "options": ["Apple", "Strawberry", "Pineapple", "Grape"], "correctAnswer": "Pineapple" },
-        { "id": 67, "question": "How many players are on a standard soccer team?", "options": ["9", "10", "11", "12"], "correctAnswer": "11" },
-        { "id": 68, "question": "Which sport uses a net, a racket, and a shuttlecock?", "options": ["Tennis", "Badminton", "Squash", "Table Tennis"], "correctAnswer": "Badminton" },
-        { "id": 69, "question": "Who has won the most Grand Slam singles titles in men's tennis history?", "options": ["Roger Federer", "Rafael Nadal", "Novak Djokovic", "Pete Sampras"], "correctAnswer": "Novak Djokovic" },
-        { "id": 70, "question": "What sport is known as 'America's Pastime'?", "options": ["American Football", "Basketball", "Baseball", "Hockey"], "correctAnswer": "Baseball" }
+        {
+          "id": 51,
+          "question": "In what year did World War II end?",
+          "options": [
+            "1943",
+            "1945",
+            "1947",
+            "1950"
+          ],
+          "correctAnswer": "1945"
+        },
+        {
+          "id": 52,
+          "question": "Who was the first President of the United States?",
+          "options": [
+            "Abraham Lincoln",
+            "Thomas Jefferson",
+            "George Washington",
+            "John Adams"
+          ],
+          "correctAnswer": "George Washington"
+        },
+        {
+          "id": 53,
+          "question": "Which ancient civilization built the pyramids at Giza?",
+          "options": [
+            "Romans",
+            "Greeks",
+            "Mayans",
+            "Egyptians"
+          ],
+          "correctAnswer": "Egyptians"
+        },
+        {
+          "id": 54,
+          "question": "Who was the Queen of the United Kingdom for over 70 years?",
+          "options": [
+            "Queen Victoria",
+            "Queen Elizabeth I",
+            "Queen Elizabeth II",
+            "Queen Mary"
+          ],
+          "correctAnswer": "Queen Elizabeth II"
+        },
+        {
+          "id": 55,
+          "question": "What wall was torn down in 1989?",
+          "options": [
+            "Great Wall of China",
+            "Berlin Wall",
+            "Hadrian's Wall",
+            "Western Wall"
+          ],
+          "correctAnswer": "Berlin Wall"
+        },
+        {
+          "id": 56,
+          "question": "Who was the leader of the Soviet Union during World War II?",
+          "options": [
+            "Vladimir Lenin",
+            "Joseph Stalin",
+            "Leon Trotsky",
+            "Mikhail Gorbachev"
+          ],
+          "correctAnswer": "Joseph Stalin"
+        },
+        {
+          "id": 57,
+          "question": "In which century did the Renaissance begin?",
+          "options": [
+            "13th Century",
+            "14th Century",
+            "15th Century",
+            "16th Century"
+          ],
+          "correctAnswer": "14th Century"
+        },
+        {
+          "id": 58,
+          "question": "Who discovered America in 1492?",
+          "options": [
+            "Ferdinand Magellan",
+            "Christopher Columbus",
+            "Vasco da Gama",
+            "Marco Polo"
+          ],
+          "correctAnswer": "Christopher Columbus"
+        },
+        {
+          "id": 59,
+          "question": "What was the name of the ship on which the Pilgrims traveled to North America?",
+          "options": [
+            "Santa Maria",
+            "Mayflower",
+            "Beagle",
+            "Endeavour"
+          ],
+          "correctAnswer": "Mayflower"
+        },
+        {
+          "id": 60,
+          "question": "Which empire was ruled by Julius Caesar?",
+          "options": [
+            "Ottoman Empire",
+            "British Empire",
+            "Roman Empire",
+            "Mongol Empire"
+          ],
+          "correctAnswer": "Roman Empire"
+        }
       ]
     },
     {
@@ -132,16 +715,116 @@
       "icon": "🗺️",
       "color": "bg-sky-100",
       "questions": [
-        { "id": 71, "question": "What is the longest river in the world?", "options": ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"], "correctAnswer": "Nile River" },
-        { "id": 72, "question": "Which country has the largest population?", "options": ["USA", "India", "China", "Russia"], "correctAnswer": "India" },
-        { "id": 73, "question": "Mount Everest is located in which mountain range?", "options": ["Alps", "Rockies", "Andes", "Himalayas"], "correctAnswer": "Himalayas" },
-        { "id": 74, "question": "What is the capital of Australia?", "options": ["Sydney", "Melbourne", "Canberra", "Perth"], "correctAnswer": "Canberra" },
-        { "id": 75, "question": "Which is the smallest country in the world?", "options": ["Monaco", "San Marino", "Vatican City", "Liechtenstein"], "correctAnswer": "Vatican City" },
-        { "id": 76, "question": "What desert covers much of northern Africa?", "options": ["Gobi", "Sahara", "Kalahari", "Mojave"], "correctAnswer": "Sahara" },
-        { "id": 77, "question": "Which two countries share the longest international border?", "options": ["USA and Canada", "Russia and China", "Argentina and Chile", "India and Pakistan"], "correctAnswer": "USA and Canada" },
-        { "id": 78, "question": "In which city is the Eiffel Tower located?", "options": ["London", "Rome", "Paris", "Berlin"], "correctAnswer": "Paris" },
-        { "id": 79, "question": "Which US state is the largest by area?", "options": ["Texas", "California", "Montana", "Alaska"], "correctAnswer": "Alaska" },
-        { "id": 80, "question": "What is the currency of Japan?", "options": ["Yuan", "Won", "Yen", "Ringgit"], "correctAnswer": "Yen" }
+        {
+          "id": 71,
+          "question": "What is the longest river in the world?",
+          "options": [
+            "Amazon River",
+            "Nile River",
+            "Yangtze River",
+            "Mississippi River"
+          ],
+          "correctAnswer": "Nile River"
+        },
+        {
+          "id": 72,
+          "question": "Which country has the largest population?",
+          "options": [
+            "USA",
+            "India",
+            "China",
+            "Russia"
+          ],
+          "correctAnswer": "India"
+        },
+        {
+          "id": 73,
+          "question": "Mount Everest is located in which mountain range?",
+          "options": [
+            "Alps",
+            "Rockies",
+            "Andes",
+            "Himalayas"
+          ],
+          "correctAnswer": "Himalayas"
+        },
+        {
+          "id": 74,
+          "question": "What is the capital of Australia?",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Perth"
+          ],
+          "correctAnswer": "Canberra"
+        },
+        {
+          "id": 75,
+          "question": "Which is the smallest country in the world?",
+          "options": [
+            "Monaco",
+            "San Marino",
+            "Vatican City",
+            "Liechtenstein"
+          ],
+          "correctAnswer": "Vatican City"
+        },
+        {
+          "id": 76,
+          "question": "What desert covers much of northern Africa?",
+          "options": [
+            "Gobi",
+            "Sahara",
+            "Kalahari",
+            "Mojave"
+          ],
+          "correctAnswer": "Sahara"
+        },
+        {
+          "id": 77,
+          "question": "Which two countries share the longest international border?",
+          "options": [
+            "USA and Canada",
+            "Russia and China",
+            "Argentina and Chile",
+            "India and Pakistan"
+          ],
+          "correctAnswer": "USA and Canada"
+        },
+        {
+          "id": 78,
+          "question": "In which city is the Eiffel Tower located?",
+          "options": [
+            "London",
+            "Rome",
+            "Paris",
+            "Berlin"
+          ],
+          "correctAnswer": "Paris"
+        },
+        {
+          "id": 79,
+          "question": "Which US state is the largest by area?",
+          "options": [
+            "Texas",
+            "California",
+            "Montana",
+            "Alaska"
+          ],
+          "correctAnswer": "Alaska"
+        },
+        {
+          "id": 80,
+          "question": "What is the currency of Japan?",
+          "options": [
+            "Yuan",
+            "Won",
+            "Yen",
+            "Ringgit"
+          ],
+          "correctAnswer": "Yen"
+        }
       ]
     },
     {
@@ -150,16 +833,116 @@
       "icon": "💻",
       "color": "bg-indigo-100",
       "questions": [
-        { "id": 81, "question": "Who is the co-founder of Microsoft?", "options": ["Steve Jobs", "Bill Gates", "Mark Zuckerberg", "Larry Page"], "correctAnswer": "Bill Gates" },
-        { "id": 82, "question": "What does 'HTTP' stand for?", "options": ["HyperText Transfer Protocol", "HyperText Transmission Process", "HyperText Transfer Program", "HyperLink Transfer Protocol"], "correctAnswer": "HyperText Transfer Protocol" },
-        { "id": 83, "question": "Which company created the iPhone?", "options": ["Samsung", "Google", "Apple", "Nokia"], "correctAnswer": "Apple" },
-        { "id": 84, "question": "What does 'URL' stand for?", "options": ["Uniform Resource Locator", "Universal Reference Link", "Uniform Reference Locator", "Universal Resource Link"], "correctAnswer": "Uniform Resource Locator" },
-        { "id": 85, "question": "Which social media platform is known for its 280-character limit?", "options": ["Facebook", "Instagram", "Twitter", "LinkedIn"], "correctAnswer": "Twitter" },
-        { "id": 86, "question": "What is the primary function of a CPU?", "options": ["Storage", "Processing", "Display", "Cooling"], "correctAnswer": "Processing" },
-        { "id": 87, "question": "Who created the World Wide Web?", "options": ["Tim Berners-Lee", "Vint Cerf", "Alan Turing", "Charles Babbage"], "correctAnswer": "Tim Berners-Lee" },
-        { "id": 88, "question": "What does 'RAM' stand for?", "options": ["Read Access Memory", "Random Access Memory", "Run Access Memory", "Rapid Access Memory"], "correctAnswer": "Random Access Memory" },
-        { "id": 89, "question": "Which programming language is known for its snake logo?", "options": ["Java", "C++", "Python", "Ruby"], "correctAnswer": "Python" },
-        { "id": 90, "question": "What does 'AI' stand for?", "options": ["Artificial Internet", "Automated Intelligence", "Artificial Intelligence", "Advanced Information"], "correctAnswer": "Artificial Intelligence" }
+        {
+          "id": 81,
+          "question": "Who is the co-founder of Microsoft?",
+          "options": [
+            "Steve Jobs",
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Larry Page"
+          ],
+          "correctAnswer": "Bill Gates"
+        },
+        {
+          "id": 82,
+          "question": "What does 'HTTP' stand for?",
+          "options": [
+            "HyperText Transfer Protocol",
+            "HyperText Transmission Process",
+            "HyperText Transfer Program",
+            "HyperLink Transfer Protocol"
+          ],
+          "correctAnswer": "HyperText Transfer Protocol"
+        },
+        {
+          "id": 83,
+          "question": "Which company created the iPhone?",
+          "options": [
+            "Samsung",
+            "Google",
+            "Apple",
+            "Nokia"
+          ],
+          "correctAnswer": "Apple"
+        },
+        {
+          "id": 84,
+          "question": "What does 'URL' stand for?",
+          "options": [
+            "Uniform Resource Locator",
+            "Universal Reference Link",
+            "Uniform Reference Locator",
+            "Universal Resource Link"
+          ],
+          "correctAnswer": "Uniform Resource Locator"
+        },
+        {
+          "id": 85,
+          "question": "Which social media platform is known for its 280-character limit?",
+          "options": [
+            "Facebook",
+            "Instagram",
+            "Twitter",
+            "LinkedIn"
+          ],
+          "correctAnswer": "Twitter"
+        },
+        {
+          "id": 86,
+          "question": "What is the primary function of a CPU?",
+          "options": [
+            "Storage",
+            "Processing",
+            "Display",
+            "Cooling"
+          ],
+          "correctAnswer": "Processing"
+        },
+        {
+          "id": 87,
+          "question": "Who created the World Wide Web?",
+          "options": [
+            "Tim Berners-Lee",
+            "Vint Cerf",
+            "Alan Turing",
+            "Charles Babbage"
+          ],
+          "correctAnswer": "Tim Berners-Lee"
+        },
+        {
+          "id": 88,
+          "question": "What does 'RAM' stand for?",
+          "options": [
+            "Read Access Memory",
+            "Random Access Memory",
+            "Run Access Memory",
+            "Rapid Access Memory"
+          ],
+          "correctAnswer": "Random Access Memory"
+        },
+        {
+          "id": 89,
+          "question": "Which programming language is known for its snake logo?",
+          "options": [
+            "Java",
+            "C++",
+            "Python",
+            "Ruby"
+          ],
+          "correctAnswer": "Python"
+        },
+        {
+          "id": 90,
+          "question": "What does 'AI' stand for?",
+          "options": [
+            "Artificial Internet",
+            "Automated Intelligence",
+            "Artificial Intelligence",
+            "Advanced Information"
+          ],
+          "correctAnswer": "Artificial Intelligence"
+        }
       ]
     },
     {
@@ -168,16 +951,116 @@
       "icon": "🎭",
       "color": "bg-pink-100",
       "questions": [
-        { "id": 91, "question": "Who is known as the 'King of Pop'?", "options": ["Elvis Presley", "Prince", "Michael Jackson", "Madonna"], "correctAnswer": "Michael Jackson" },
-        { "id": 92, "question": "Which band recorded the album 'Abbey Road'?", "options": ["The Rolling Stones", "The Beatles", "Pink Floyd", "Led Zeppelin"], "correctAnswer": "The Beatles" },
-        { "id": 93, "question": "In the TV show 'Friends', what is the name of the coffee shop?", "options": ["Central Perk", "Monk's Diner", "MacLaren's", "The Peach Pit"], "correctAnswer": "Central Perk" },
-        { "id": 94, "question": "Who wrote the 'Harry Potter' series?", "options": ["J.R.R. Tolkien", "J.K. Rowling", "George R.R. Martin", "C.S. Lewis"], "correctAnswer": "J.K. Rowling" },
-        { "id": 95, "question": "What is the highest-grossing Broadway show of all time?", "options": ["Wicked", "The Phantom of the Opera", "Hamilton", "The Lion King"], "correctAnswer": "The Lion King" },
-        { "id": 96, "question": "Which video game franchise features a character named Mario?", "options": ["Sonic the Hedgehog", "The Legend of Zelda", "Super Mario", "Donkey Kong"], "correctAnswer": "Super Mario" },
-        { "id": 97, "question": "Who won the Grammy for Album of the Year in 2024?", "options": ["Taylor Swift", "SZA", "Miley Cyrus", "Boygenius"], "correctAnswer": "Taylor Swift" },
-        { "id": 98, "question": "What streaming service originally produced 'Stranger Things'?", "options": ["Hulu", "Amazon Prime", "Netflix", "Disney+"], "correctAnswer": "Netflix" },
-        { "id": 99, "question": "Which superhero is known as the 'Caped Crusader'?", "options": ["Superman", "Spider-Man", "Batman", "Iron Man"], "correctAnswer": "Batman" },
-        { "id": 100, "question": "What was the first feature-length animated movie?", "options": ["Cinderella", "Pinocchio", "Snow White and the Seven Dwarfs", "Dumbo"], "correctAnswer": "Snow White and the Seven Dwarfs" }
+        {
+          "id": 91,
+          "question": "Who is known as the 'King of Pop'?",
+          "options": [
+            "Elvis Presley",
+            "Prince",
+            "Michael Jackson",
+            "Madonna"
+          ],
+          "correctAnswer": "Michael Jackson"
+        },
+        {
+          "id": 92,
+          "question": "Which band recorded the album 'Abbey Road'?",
+          "options": [
+            "The Rolling Stones",
+            "The Beatles",
+            "Pink Floyd",
+            "Led Zeppelin"
+          ],
+          "correctAnswer": "The Beatles"
+        },
+        {
+          "id": 93,
+          "question": "In the TV show 'Friends', what is the name of the coffee shop?",
+          "options": [
+            "Central Perk",
+            "Monk's Diner",
+            "MacLaren's",
+            "The Peach Pit"
+          ],
+          "correctAnswer": "Central Perk"
+        },
+        {
+          "id": 94,
+          "question": "Who wrote the 'Harry Potter' series?",
+          "options": [
+            "J.R.R. Tolkien",
+            "J.K. Rowling",
+            "George R.R. Martin",
+            "C.S. Lewis"
+          ],
+          "correctAnswer": "J.K. Rowling"
+        },
+        {
+          "id": 95,
+          "question": "What is the highest-grossing Broadway show of all time?",
+          "options": [
+            "Wicked",
+            "The Phantom of the Opera",
+            "Hamilton",
+            "The Lion King"
+          ],
+          "correctAnswer": "The Lion King"
+        },
+        {
+          "id": 96,
+          "question": "Which video game franchise features a character named Mario?",
+          "options": [
+            "Sonic the Hedgehog",
+            "The Legend of Zelda",
+            "Super Mario",
+            "Donkey Kong"
+          ],
+          "correctAnswer": "Super Mario"
+        },
+        {
+          "id": 97,
+          "question": "Who won the Grammy for Album of the Year in 2024?",
+          "options": [
+            "Taylor Swift",
+            "SZA",
+            "Miley Cyrus",
+            "Boygenius"
+          ],
+          "correctAnswer": "Taylor Swift"
+        },
+        {
+          "id": 98,
+          "question": "What streaming service originally produced 'Stranger Things'?",
+          "options": [
+            "Hulu",
+            "Amazon Prime",
+            "Netflix",
+            "Disney+"
+          ],
+          "correctAnswer": "Netflix"
+        },
+        {
+          "id": 99,
+          "question": "Which superhero is known as the 'Caped Crusader'?",
+          "options": [
+            "Superman",
+            "Spider-Man",
+            "Batman",
+            "Iron Man"
+          ],
+          "correctAnswer": "Batman"
+        },
+        {
+          "id": 100,
+          "question": "What was the first feature-length animated movie?",
+          "options": [
+            "Cinderella",
+            "Pinocchio",
+            "Snow White and the Seven Dwarfs",
+            "Dumbo"
+          ],
+          "correctAnswer": "Snow White and the Seven Dwarfs"
+        }
       ]
     },
     {
@@ -186,16 +1069,116 @@
       "icon": "🍕",
       "color": "bg-amber-100",
       "questions": [
-        { "id": 101, "question": "Which country is the origin of pizza?", "options": ["France", "Italy", "Greece", "Spain"], "correctAnswer": "Italy" },
-        { "id": 102, "question": "What is the main ingredient in guacamole?", "options": ["Tomato", "Avocado", "Cucumber", "Onion"], "correctAnswer": "Avocado" },
-        { "id": 103, "question": "Which spice is derived from the Crocus flower?", "options": ["Turmeric", "Saffron", "Paprika", "Cinnamon"], "correctAnswer": "Saffron" },
-        { "id": 104, "question": "Sushi originated in which country?", "options": ["China", "Korea", "Japan", "Thailand"], "correctAnswer": "Japan" },
-        { "id": 105, "question": "What type of pastry is used to make a croissant?", "options": ["Filo", "Puff pastry", "Laminated dough", "Shortcrust"], "correctAnswer": "Laminated dough" },
-        { "id": 106, "question": "Which fruit is known as the 'King of Fruits'?", "options": ["Mango", "Durian", "Jackfruit", "Pineapple"], "correctAnswer": "Durian" },
-        { "id": 107, "question": "What is the main ingredient in traditional hummus?", "options": ["Lentils", "Chickpeas", "Black beans", "Kidney beans"], "correctAnswer": "Chickpeas" },
-        { "id": 108, "question": "Which country is famous for inventing the croissant... wait, which country is famous for tacos?", "options": ["Spain", "Mexico", "Brazil", "Peru"], "correctAnswer": "Mexico" },
-        { "id": 109, "question": "What gives bread its rise?", "options": ["Sugar", "Salt", "Yeast", "Oil"], "correctAnswer": "Yeast" },
-        { "id": 110, "question": "Which Indian dish is made primarily from fermented rice and lentil batter?", "options": ["Biryani", "Dosa", "Samosa", "Paneer Tikka"], "correctAnswer": "Dosa" }
+        {
+          "id": 101,
+          "question": "Which country is the origin of pizza?",
+          "options": [
+            "France",
+            "Italy",
+            "Greece",
+            "Spain"
+          ],
+          "correctAnswer": "Italy"
+        },
+        {
+          "id": 102,
+          "question": "What is the main ingredient in guacamole?",
+          "options": [
+            "Tomato",
+            "Avocado",
+            "Cucumber",
+            "Onion"
+          ],
+          "correctAnswer": "Avocado"
+        },
+        {
+          "id": 103,
+          "question": "Which spice is derived from the Crocus flower?",
+          "options": [
+            "Turmeric",
+            "Saffron",
+            "Paprika",
+            "Cinnamon"
+          ],
+          "correctAnswer": "Saffron"
+        },
+        {
+          "id": 104,
+          "question": "Sushi originated in which country?",
+          "options": [
+            "China",
+            "Korea",
+            "Japan",
+            "Thailand"
+          ],
+          "correctAnswer": "Japan"
+        },
+        {
+          "id": 105,
+          "question": "What type of pastry is used to make a croissant?",
+          "options": [
+            "Filo",
+            "Puff pastry",
+            "Laminated dough",
+            "Shortcrust"
+          ],
+          "correctAnswer": "Laminated dough"
+        },
+        {
+          "id": 106,
+          "question": "Which fruit is known as the 'King of Fruits'?",
+          "options": [
+            "Mango",
+            "Durian",
+            "Jackfruit",
+            "Pineapple"
+          ],
+          "correctAnswer": "Durian"
+        },
+        {
+          "id": 107,
+          "question": "What is the main ingredient in traditional hummus?",
+          "options": [
+            "Lentils",
+            "Chickpeas",
+            "Black beans",
+            "Kidney beans"
+          ],
+          "correctAnswer": "Chickpeas"
+        },
+        {
+          "id": 108,
+          "question": "Which country is famous for inventing the croissant... wait, which country is famous for tacos?",
+          "options": [
+            "Spain",
+            "Mexico",
+            "Brazil",
+            "Peru"
+          ],
+          "correctAnswer": "Mexico"
+        },
+        {
+          "id": 109,
+          "question": "What gives bread its rise?",
+          "options": [
+            "Sugar",
+            "Salt",
+            "Yeast",
+            "Oil"
+          ],
+          "correctAnswer": "Yeast"
+        },
+        {
+          "id": 110,
+          "question": "Which Indian dish is made primarily from fermented rice and lentil batter?",
+          "options": [
+            "Biryani",
+            "Dosa",
+            "Samosa",
+            "Paneer Tikka"
+          ],
+          "correctAnswer": "Dosa"
+        }
       ]
     },
     {
@@ -204,16 +1187,116 @@
       "icon": "🐾",
       "color": "bg-lime-100",
       "questions": [
-        { "id": 111, "question": "Which is the largest mammal on Earth?", "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"], "correctAnswer": "Blue Whale" },
-        { "id": 112, "question": "Which bird is known for its inability to fly but is a great swimmer?", "options": ["Ostrich", "Penguin", "Peacock", "Emu"], "correctAnswer": "Penguin" },
-        { "id": 113, "question": "What is the fastest land animal?", "options": ["Lion", "Cheetah", "Horse", "Leopard"], "correctAnswer": "Cheetah" },
-        { "id": 114, "question": "Which animal is known as the 'Ship of the Desert'?", "options": ["Horse", "Camel", "Donkey", "Goat"], "correctAnswer": "Camel" },
-        { "id": 115, "question": "How many hearts does an octopus have?", "options": ["1", "2", "3", "4"], "correctAnswer": "3" },
-        { "id": 116, "question": "Which big cat is known for having stripes unique to each individual?", "options": ["Lion", "Tiger", "Leopard", "Cheetah"], "correctAnswer": "Tiger" },
-        { "id": 117, "question": "What is the national animal of India?", "options": ["Lion", "Elephant", "Tiger", "Peacock"], "correctAnswer": "Tiger" },
-        { "id": 118, "question": "Which animal sleeps for almost 20 hours a day?", "options": ["Sloth", "Koala", "Panda", "Cat"], "correctAnswer": "Koala" },
-        { "id": 119, "question": "What do you call a baby kangaroo?", "options": ["Cub", "Joey", "Pup", "Kid"], "correctAnswer": "Joey" },
-        { "id": 120, "question": "Which is the only continent without reptiles or snakes?", "options": ["Australia", "Antarctica", "Europe", "Asia"], "correctAnswer": "Antarctica" }
+        {
+          "id": 111,
+          "question": "Which is the largest mammal on Earth?",
+          "options": [
+            "Elephant",
+            "Blue Whale",
+            "Giraffe",
+            "Hippopotamus"
+          ],
+          "correctAnswer": "Blue Whale"
+        },
+        {
+          "id": 112,
+          "question": "Which bird is known for its inability to fly but is a great swimmer?",
+          "options": [
+            "Ostrich",
+            "Penguin",
+            "Peacock",
+            "Emu"
+          ],
+          "correctAnswer": "Penguin"
+        },
+        {
+          "id": 113,
+          "question": "What is the fastest land animal?",
+          "options": [
+            "Lion",
+            "Cheetah",
+            "Horse",
+            "Leopard"
+          ],
+          "correctAnswer": "Cheetah"
+        },
+        {
+          "id": 114,
+          "question": "Which animal is known as the 'Ship of the Desert'?",
+          "options": [
+            "Horse",
+            "Camel",
+            "Donkey",
+            "Goat"
+          ],
+          "correctAnswer": "Camel"
+        },
+        {
+          "id": 115,
+          "question": "How many hearts does an octopus have?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctAnswer": "3"
+        },
+        {
+          "id": 116,
+          "question": "Which big cat is known for having stripes unique to each individual?",
+          "options": [
+            "Lion",
+            "Tiger",
+            "Leopard",
+            "Cheetah"
+          ],
+          "correctAnswer": "Tiger"
+        },
+        {
+          "id": 117,
+          "question": "What is the national animal of India?",
+          "options": [
+            "Lion",
+            "Elephant",
+            "Tiger",
+            "Peacock"
+          ],
+          "correctAnswer": "Tiger"
+        },
+        {
+          "id": 118,
+          "question": "Which animal sleeps for almost 20 hours a day?",
+          "options": [
+            "Sloth",
+            "Koala",
+            "Panda",
+            "Cat"
+          ],
+          "correctAnswer": "Koala"
+        },
+        {
+          "id": 119,
+          "question": "What do you call a baby kangaroo?",
+          "options": [
+            "Cub",
+            "Joey",
+            "Pup",
+            "Kid"
+          ],
+          "correctAnswer": "Joey"
+        },
+        {
+          "id": 120,
+          "question": "Which is the only continent without reptiles or snakes?",
+          "options": [
+            "Australia",
+            "Antarctica",
+            "Europe",
+            "Asia"
+          ],
+          "correctAnswer": "Antarctica"
+        }
       ]
     },
     {
@@ -222,16 +1305,116 @@
       "icon": "🎵",
       "color": "bg-violet-100",
       "questions": [
-        { "id": 121, "question": "Which instrument has 88 keys?", "options": ["Guitar", "Violin", "Piano", "Flute"], "correctAnswer": "Piano" },
-        { "id": 122, "question": "Who is known as the 'Queen of Pop'?", "options": ["Madonna", "Lady Gaga", "Beyoncé", "Rihanna"], "correctAnswer": "Madonna" },
-        { "id": 123, "question": "Which musical genre originated in New Orleans?", "options": ["Rock", "Jazz", "Blues", "Reggae"], "correctAnswer": "Jazz" },
-        { "id": 124, "question": "How many strings does a standard guitar have?", "options": ["4", "5", "6", "7"], "correctAnswer": "6" },
-        { "id": 125, "question": "Which legendary composer continued composing even after going deaf?", "options": ["Mozart", "Bach", "Beethoven", "Chopin"], "correctAnswer": "Beethoven" },
-        { "id": 126, "question": "Which Indian instrument is closely associated with Ravi Shankar?", "options": ["Tabla", "Sitar", "Veena", "Flute"], "correctAnswer": "Sitar" },
-        { "id": 127, "question": "What does 'DJ' stand for?", "options": ["Disc Jockey", "Digital Jukebox", "Dance Junction", "Dual Joystick"], "correctAnswer": "Disc Jockey" },
-        { "id": 128, "question": "Which band is famously associated with the song 'Bohemian Rhapsody'?", "options": ["The Beatles", "Queen", "Pink Floyd", "ABBA"], "correctAnswer": "Queen" },
-        { "id": 129, "question": "What is the term for singing without instrumental accompaniment?", "options": ["Acapella", "Solo", "Duet", "Chorus"], "correctAnswer": "Acapella" },
-        { "id": 130, "question": "Which singer is known as the 'King of Rock and Roll'?", "options": ["Elvis Presley", "Chuck Berry", "Jerry Lee Lewis", "Buddy Holly"], "correctAnswer": "Elvis Presley" }
+        {
+          "id": 121,
+          "question": "Which instrument has 88 keys?",
+          "options": [
+            "Guitar",
+            "Violin",
+            "Piano",
+            "Flute"
+          ],
+          "correctAnswer": "Piano"
+        },
+        {
+          "id": 122,
+          "question": "Who is known as the 'Queen of Pop'?",
+          "options": [
+            "Madonna",
+            "Lady Gaga",
+            "Beyoncé",
+            "Rihanna"
+          ],
+          "correctAnswer": "Madonna"
+        },
+        {
+          "id": 123,
+          "question": "Which musical genre originated in New Orleans?",
+          "options": [
+            "Rock",
+            "Jazz",
+            "Blues",
+            "Reggae"
+          ],
+          "correctAnswer": "Jazz"
+        },
+        {
+          "id": 124,
+          "question": "How many strings does a standard guitar have?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "correctAnswer": "6"
+        },
+        {
+          "id": 125,
+          "question": "Which legendary composer continued composing even after going deaf?",
+          "options": [
+            "Mozart",
+            "Bach",
+            "Beethoven",
+            "Chopin"
+          ],
+          "correctAnswer": "Beethoven"
+        },
+        {
+          "id": 126,
+          "question": "Which Indian instrument is closely associated with Ravi Shankar?",
+          "options": [
+            "Tabla",
+            "Sitar",
+            "Veena",
+            "Flute"
+          ],
+          "correctAnswer": "Sitar"
+        },
+        {
+          "id": 127,
+          "question": "What does 'DJ' stand for?",
+          "options": [
+            "Disc Jockey",
+            "Digital Jukebox",
+            "Dance Junction",
+            "Dual Joystick"
+          ],
+          "correctAnswer": "Disc Jockey"
+        },
+        {
+          "id": 128,
+          "question": "Which band is famously associated with the song 'Bohemian Rhapsody'?",
+          "options": [
+            "The Beatles",
+            "Queen",
+            "Pink Floyd",
+            "ABBA"
+          ],
+          "correctAnswer": "Queen"
+        },
+        {
+          "id": 129,
+          "question": "What is the term for singing without instrumental accompaniment?",
+          "options": [
+            "Acapella",
+            "Solo",
+            "Duet",
+            "Chorus"
+          ],
+          "correctAnswer": "Acapella"
+        },
+        {
+          "id": 130,
+          "question": "Which singer is known as the 'King of Rock and Roll'?",
+          "options": [
+            "Elvis Presley",
+            "Chuck Berry",
+            "Jerry Lee Lewis",
+            "Buddy Holly"
+          ],
+          "correctAnswer": "Elvis Presley"
+        }
       ]
     },
     {
@@ -240,16 +1423,116 @@
       "icon": "🎥",
       "color": "bg-rose-100",
       "questions": [
-        { "id": 131, "question": "Who is known as the 'King of Bollywood'?", "options": ["Salman Khan", "Aamir Khan", "Shah Rukh Khan", "Akshay Kumar"], "correctAnswer": "Shah Rukh Khan" },
-        { "id": 132, "question": "Which actress is known as the 'Bollywood Diva' and a former Miss World?", "options": ["Deepika Padukone", "Priyanka Chopra", "Aishwarya Rai", "Katrina Kaif"], "correctAnswer": "Aishwarya Rai" },
-        { "id": 133, "question": "Which 1975 film is often called the greatest Bollywood film of all time?", "options": ["Deewar", "Sholay", "Don", "Zanjeer"], "correctAnswer": "Sholay" },
-        { "id": 134, "question": "Who directed the movie '3 Idiots'?", "options": ["Karan Johar", "Rajkumar Hirani", "Sanjay Leela Bhansali", "Farhan Akhtar"], "correctAnswer": "Rajkumar Hirani" },
-        { "id": 135, "question": "Which Bollywood award ceremony is often compared to the Oscars?", "options": ["Filmfare Awards", "Screen Awards", "IIFA Awards", "Zee Cine Awards"], "correctAnswer": "Filmfare Awards" },
-        { "id": 136, "question": "Who is known as the 'Big B' of Bollywood?", "options": ["Dharmendra", "Amitabh Bachchan", "Rajesh Khanna", "Dilip Kumar"], "correctAnswer": "Amitabh Bachchan" },
-        { "id": 137, "question": "Which city is the home of the Bollywood film industry?", "options": ["Delhi", "Chennai", "Mumbai", "Kolkata"], "correctAnswer": "Mumbai" },
-        { "id": 138, "question": "Which film became the first Bollywood movie to gross over ₹1000 crore worldwide?", "options": ["Dangal", "Bajrangi Bhaijaan", "PK", "Baahubali 2"], "correctAnswer": "Dangal" },
-        { "id": 139, "question": "Who composed the music for movies like 'Lagaan' and 'Jodhaa Akbar'?", "options": ["A.R. Rahman", "Shankar-Ehsaan-Loy", "Pritam", "Anu Malik"], "correctAnswer": "A.R. Rahman" },
-        { "id": 140, "question": "Which actress is known as the 'first lady of Indian cinema' and starred in 'Mother India'?", "options": ["Madhubala", "Nargis", "Meena Kumari", "Waheeda Rehman"], "correctAnswer": "Nargis" }
+        {
+          "id": 131,
+          "question": "Who is known as the 'King of Bollywood'?",
+          "options": [
+            "Salman Khan",
+            "Aamir Khan",
+            "Shah Rukh Khan",
+            "Akshay Kumar"
+          ],
+          "correctAnswer": "Shah Rukh Khan"
+        },
+        {
+          "id": 132,
+          "question": "Which actress is known as the 'Bollywood Diva' and a former Miss World?",
+          "options": [
+            "Deepika Padukone",
+            "Priyanka Chopra",
+            "Aishwarya Rai",
+            "Katrina Kaif"
+          ],
+          "correctAnswer": "Aishwarya Rai"
+        },
+        {
+          "id": 133,
+          "question": "Which 1975 film is often called the greatest Bollywood film of all time?",
+          "options": [
+            "Deewar",
+            "Sholay",
+            "Don",
+            "Zanjeer"
+          ],
+          "correctAnswer": "Sholay"
+        },
+        {
+          "id": 134,
+          "question": "Who directed the movie '3 Idiots'?",
+          "options": [
+            "Karan Johar",
+            "Rajkumar Hirani",
+            "Sanjay Leela Bhansali",
+            "Farhan Akhtar"
+          ],
+          "correctAnswer": "Rajkumar Hirani"
+        },
+        {
+          "id": 135,
+          "question": "Which Bollywood award ceremony is often compared to the Oscars?",
+          "options": [
+            "Filmfare Awards",
+            "Screen Awards",
+            "IIFA Awards",
+            "Zee Cine Awards"
+          ],
+          "correctAnswer": "Filmfare Awards"
+        },
+        {
+          "id": 136,
+          "question": "Who is known as the 'Big B' of Bollywood?",
+          "options": [
+            "Dharmendra",
+            "Amitabh Bachchan",
+            "Rajesh Khanna",
+            "Dilip Kumar"
+          ],
+          "correctAnswer": "Amitabh Bachchan"
+        },
+        {
+          "id": 137,
+          "question": "Which city is the home of the Bollywood film industry?",
+          "options": [
+            "Delhi",
+            "Chennai",
+            "Mumbai",
+            "Kolkata"
+          ],
+          "correctAnswer": "Mumbai"
+        },
+        {
+          "id": 138,
+          "question": "Which film became the first Bollywood movie to gross over ₹1000 crore worldwide?",
+          "options": [
+            "Dangal",
+            "Bajrangi Bhaijaan",
+            "PK",
+            "Baahubali 2"
+          ],
+          "correctAnswer": "Dangal"
+        },
+        {
+          "id": 139,
+          "question": "Who composed the music for movies like 'Lagaan' and 'Jodhaa Akbar'?",
+          "options": [
+            "A.R. Rahman",
+            "Shankar-Ehsaan-Loy",
+            "Pritam",
+            "Anu Malik"
+          ],
+          "correctAnswer": "A.R. Rahman"
+        },
+        {
+          "id": 140,
+          "question": "Which actress is known as the 'first lady of Indian cinema' and starred in 'Mother India'?",
+          "options": [
+            "Madhubala",
+            "Nargis",
+            "Meena Kumari",
+            "Waheeda Rehman"
+          ],
+          "correctAnswer": "Nargis"
+        }
       ]
     },
     {
@@ -258,16 +1541,116 @@
       "icon": "🏷️",
       "color": "bg-cyan-100",
       "questions": [
-        { "id": 141, "question": "Which brand's logo is a bitten apple?", "options": ["Samsung", "Apple", "Microsoft", "Sony"], "correctAnswer": "Apple" },
-        { "id": 142, "question": "The 'swoosh' logo belongs to which brand?", "options": ["Adidas", "Puma", "Nike", "Reebok"], "correctAnswer": "Nike" },
-        { "id": 143, "question": "Which fast-food chain uses a golden 'M' as its logo?", "options": ["Burger King", "KFC", "McDonald's", "Subway"], "correctAnswer": "McDonald's" },
-        { "id": 144, "question": "Which car brand's logo features a three-pointed star?", "options": ["BMW", "Audi", "Mercedes-Benz", "Volkswagen"], "correctAnswer": "Mercedes-Benz" },
-        { "id": 145, "question": "Which company's logo is a half-bitten and rainbow-colored apple historically?", "options": ["Apple", "Adobe", "Android", "Amazon"], "correctAnswer": "Apple" },
-        { "id": 146, "question": "Which brand uses three parallel stripes in its logo?", "options": ["Nike", "Adidas", "Puma", "Under Armour"], "correctAnswer": "Adidas" },
-        { "id": 147, "question": "The smiling arrow from 'A' to 'Z' is the logo of which company?", "options": ["eBay", "Amazon", "Flipkart", "Alibaba"], "correctAnswer": "Amazon" },
-        { "id": 148, "question": "Which soft drink brand is associated with a red and white wave logo?", "options": ["Pepsi", "Coca-Cola", "Sprite", "Fanta"], "correctAnswer": "Coca-Cola" },
-        { "id": 149, "question": "Which tech company's logo is four colored squares forming a window?", "options": ["Google", "Microsoft", "Intel", "IBM"], "correctAnswer": "Microsoft" },
-        { "id": 150, "question": "Which brand's mascot is a red-haired girl with pigtails on packets of noodles or candy?", "options": ["Wendy's", "Maggi", "KFC", "Lay's"], "correctAnswer": "Wendy's" }
+        {
+          "id": 141,
+          "question": "Which brand's logo is a bitten apple?",
+          "options": [
+            "Samsung",
+            "Apple",
+            "Microsoft",
+            "Sony"
+          ],
+          "correctAnswer": "Apple"
+        },
+        {
+          "id": 142,
+          "question": "The 'swoosh' logo belongs to which brand?",
+          "options": [
+            "Adidas",
+            "Puma",
+            "Nike",
+            "Reebok"
+          ],
+          "correctAnswer": "Nike"
+        },
+        {
+          "id": 143,
+          "question": "Which fast-food chain uses a golden 'M' as its logo?",
+          "options": [
+            "Burger King",
+            "KFC",
+            "McDonald's",
+            "Subway"
+          ],
+          "correctAnswer": "McDonald's"
+        },
+        {
+          "id": 144,
+          "question": "Which car brand's logo features a three-pointed star?",
+          "options": [
+            "BMW",
+            "Audi",
+            "Mercedes-Benz",
+            "Volkswagen"
+          ],
+          "correctAnswer": "Mercedes-Benz"
+        },
+        {
+          "id": 145,
+          "question": "Which company's logo is a half-bitten and rainbow-colored apple historically?",
+          "options": [
+            "Apple",
+            "Adobe",
+            "Android",
+            "Amazon"
+          ],
+          "correctAnswer": "Apple"
+        },
+        {
+          "id": 146,
+          "question": "Which brand uses three parallel stripes in its logo?",
+          "options": [
+            "Nike",
+            "Adidas",
+            "Puma",
+            "Under Armour"
+          ],
+          "correctAnswer": "Adidas"
+        },
+        {
+          "id": 147,
+          "question": "The smiling arrow from 'A' to 'Z' is the logo of which company?",
+          "options": [
+            "eBay",
+            "Amazon",
+            "Flipkart",
+            "Alibaba"
+          ],
+          "correctAnswer": "Amazon"
+        },
+        {
+          "id": 148,
+          "question": "Which soft drink brand is associated with a red and white wave logo?",
+          "options": [
+            "Pepsi",
+            "Coca-Cola",
+            "Sprite",
+            "Fanta"
+          ],
+          "correctAnswer": "Coca-Cola"
+        },
+        {
+          "id": 149,
+          "question": "Which tech company's logo is four colored squares forming a window?",
+          "options": [
+            "Google",
+            "Microsoft",
+            "Intel",
+            "IBM"
+          ],
+          "correctAnswer": "Microsoft"
+        },
+        {
+          "id": 150,
+          "question": "Which brand's mascot is a red-haired girl with pigtails on packets of noodles or candy?",
+          "options": [
+            "Wendy's",
+            "Maggi",
+            "KFC",
+            "Lay's"
+          ],
+          "correctAnswer": "Wendy's"
+        }
       ]
     },
     {
@@ -276,16 +1659,116 @@
       "icon": "⚡",
       "color": "bg-fuchsia-100",
       "questions": [
-        { "id": 151, "question": "Who is the Greek god of the sea?", "options": ["Zeus", "Poseidon", "Hades", "Apollo"], "correctAnswer": "Poseidon" },
-        { "id": 152, "question": "In Hindu mythology, who is the god of destruction?", "options": ["Brahma", "Vishnu", "Shiva", "Indra"], "correctAnswer": "Shiva" },
-        { "id": 153, "question": "Which mythical creature is half-man and half-horse?", "options": ["Minotaur", "Centaur", "Satyr", "Faun"], "correctAnswer": "Centaur" },
-        { "id": 154, "question": "Who is the king of the Norse gods?", "options": ["Thor", "Loki", "Odin", "Baldur"], "correctAnswer": "Odin" },
-        { "id": 155, "question": "In the Ramayana, who is the loyal monkey god devoted to Lord Rama?", "options": ["Sugriva", "Hanuman", "Vali", "Jambavan"], "correctAnswer": "Hanuman" },
-        { "id": 156, "question": "Which Greek hero is famous for his 'Achilles' heel'?", "options": ["Hercules", "Achilles", "Perseus", "Odysseus"], "correctAnswer": "Achilles" },
-        { "id": 157, "question": "Who is the Egyptian god of the afterlife?", "options": ["Ra", "Anubis", "Osiris", "Horus"], "correctAnswer": "Osiris" },
-        { "id": 158, "question": "In Hindu mythology, what is the name of Lord Vishnu's mount?", "options": ["Nandi", "Garuda", "Airavata", "Vahana"], "correctAnswer": "Garuda" },
-        { "id": 159, "question": "Which box did Pandora open, releasing evils into the world?", "options": ["Pandora's Box", "Trojan Box", "Zeus's Vault", "Athena's Chest"], "correctAnswer": "Pandora's Box" },
-        { "id": 160, "question": "Who is the Hindu goddess of wealth and prosperity?", "options": ["Saraswati", "Lakshmi", "Durga", "Parvati"], "correctAnswer": "Lakshmi" }
+        {
+          "id": 151,
+          "question": "Who is the Greek god of the sea?",
+          "options": [
+            "Zeus",
+            "Poseidon",
+            "Hades",
+            "Apollo"
+          ],
+          "correctAnswer": "Poseidon"
+        },
+        {
+          "id": 152,
+          "question": "In Hindu mythology, who is the god of destruction?",
+          "options": [
+            "Brahma",
+            "Vishnu",
+            "Shiva",
+            "Indra"
+          ],
+          "correctAnswer": "Shiva"
+        },
+        {
+          "id": 153,
+          "question": "Which mythical creature is half-man and half-horse?",
+          "options": [
+            "Minotaur",
+            "Centaur",
+            "Satyr",
+            "Faun"
+          ],
+          "correctAnswer": "Centaur"
+        },
+        {
+          "id": 154,
+          "question": "Who is the king of the Norse gods?",
+          "options": [
+            "Thor",
+            "Loki",
+            "Odin",
+            "Baldur"
+          ],
+          "correctAnswer": "Odin"
+        },
+        {
+          "id": 155,
+          "question": "In the Ramayana, who is the loyal monkey god devoted to Lord Rama?",
+          "options": [
+            "Sugriva",
+            "Hanuman",
+            "Vali",
+            "Jambavan"
+          ],
+          "correctAnswer": "Hanuman"
+        },
+        {
+          "id": 156,
+          "question": "Which Greek hero is famous for his 'Achilles' heel'?",
+          "options": [
+            "Hercules",
+            "Achilles",
+            "Perseus",
+            "Odysseus"
+          ],
+          "correctAnswer": "Achilles"
+        },
+        {
+          "id": 157,
+          "question": "Who is the Egyptian god of the afterlife?",
+          "options": [
+            "Ra",
+            "Anubis",
+            "Osiris",
+            "Horus"
+          ],
+          "correctAnswer": "Osiris"
+        },
+        {
+          "id": 158,
+          "question": "In Hindu mythology, what is the name of Lord Vishnu's mount?",
+          "options": [
+            "Nandi",
+            "Garuda",
+            "Airavata",
+            "Vahana"
+          ],
+          "correctAnswer": "Garuda"
+        },
+        {
+          "id": 159,
+          "question": "Which box did Pandora open, releasing evils into the world?",
+          "options": [
+            "Pandora's Box",
+            "Trojan Box",
+            "Zeus's Vault",
+            "Athena's Chest"
+          ],
+          "correctAnswer": "Pandora's Box"
+        },
+        {
+          "id": 160,
+          "question": "Who is the Hindu goddess of wealth and prosperity?",
+          "options": [
+            "Saraswati",
+            "Lakshmi",
+            "Durga",
+            "Parvati"
+          ],
+          "correctAnswer": "Lakshmi"
+        }
       ]
     },
     {
@@ -294,16 +1777,116 @@
       "icon": "🎉",
       "color": "bg-orange-200",
       "questions": [
-        { "id": 161, "question": "Diwali is also known as the festival of what?", "options": ["Colors", "Lights", "Harvest", "Music"], "correctAnswer": "Lights" },
-        { "id": 162, "question": "Which festival is known as the 'Festival of Colors'?", "options": ["Diwali", "Holi", "Navratri", "Onam"], "correctAnswer": "Holi" },
-        { "id": 163, "question": "On which day is Christmas celebrated?", "options": ["December 24", "December 25", "December 26", "January 1"], "correctAnswer": "December 25" },
-        { "id": 164, "question": "Which festival marks the end of Ramadan for Muslims?", "options": ["Eid al-Adha", "Eid al-Fitr", "Muharram", "Ramzan"], "correctAnswer": "Eid al-Fitr" },
-        { "id": 165, "question": "Thanksgiving is traditionally celebrated in which two countries?", "options": ["USA and Canada", "UK and Australia", "USA and Mexico", "Canada and UK"], "correctAnswer": "USA and Canada" },
-        { "id": 166, "question": "Which Chinese festival is celebrated with dragon dances and red lanterns to mark the new year?", "options": ["Mid-Autumn Festival", "Chinese New Year", "Dragon Boat Festival", "Qingming Festival"], "correctAnswer": "Chinese New Year" },
-        { "id": 167, "question": "What do people typically light during Diwali?", "options": ["Candles only", "Diyas (oil lamps)", "Bonfires", "Lanterns only"], "correctAnswer": "Diyas (oil lamps)" },
-        { "id": 168, "question": "Which festival involves fasting from dawn to sunset for a month?", "options": ["Navratri", "Ramadan", "Lent", "Vesak"], "correctAnswer": "Ramadan" },
-        { "id": 169, "question": "Halloween is traditionally celebrated on which date?", "options": ["October 30", "October 31", "November 1", "November 2"], "correctAnswer": "October 31" },
-        { "id": 170, "question": "Which Indian festival celebrates the bond between brothers and sisters?", "options": ["Raksha Bandhan", "Karva Chauth", "Bhai Dooj", "Both Raksha Bandhan and Bhai Dooj"], "correctAnswer": "Both Raksha Bandhan and Bhai Dooj" }
+        {
+          "id": 161,
+          "question": "Diwali is also known as the festival of what?",
+          "options": [
+            "Colors",
+            "Lights",
+            "Harvest",
+            "Music"
+          ],
+          "correctAnswer": "Lights"
+        },
+        {
+          "id": 162,
+          "question": "Which festival is known as the 'Festival of Colors'?",
+          "options": [
+            "Diwali",
+            "Holi",
+            "Navratri",
+            "Onam"
+          ],
+          "correctAnswer": "Holi"
+        },
+        {
+          "id": 163,
+          "question": "On which day is Christmas celebrated?",
+          "options": [
+            "December 24",
+            "December 25",
+            "December 26",
+            "January 1"
+          ],
+          "correctAnswer": "December 25"
+        },
+        {
+          "id": 164,
+          "question": "Which festival marks the end of Ramadan for Muslims?",
+          "options": [
+            "Eid al-Adha",
+            "Eid al-Fitr",
+            "Muharram",
+            "Ramzan"
+          ],
+          "correctAnswer": "Eid al-Fitr"
+        },
+        {
+          "id": 165,
+          "question": "Thanksgiving is traditionally celebrated in which two countries?",
+          "options": [
+            "USA and Canada",
+            "UK and Australia",
+            "USA and Mexico",
+            "Canada and UK"
+          ],
+          "correctAnswer": "USA and Canada"
+        },
+        {
+          "id": 166,
+          "question": "Which Chinese festival is celebrated with dragon dances and red lanterns to mark the new year?",
+          "options": [
+            "Mid-Autumn Festival",
+            "Chinese New Year",
+            "Dragon Boat Festival",
+            "Qingming Festival"
+          ],
+          "correctAnswer": "Chinese New Year"
+        },
+        {
+          "id": 167,
+          "question": "What do people typically light during Diwali?",
+          "options": [
+            "Candles only",
+            "Diyas (oil lamps)",
+            "Bonfires",
+            "Lanterns only"
+          ],
+          "correctAnswer": "Diyas (oil lamps)"
+        },
+        {
+          "id": 168,
+          "question": "Which festival involves fasting from dawn to sunset for a month?",
+          "options": [
+            "Navratri",
+            "Ramadan",
+            "Lent",
+            "Vesak"
+          ],
+          "correctAnswer": "Ramadan"
+        },
+        {
+          "id": 169,
+          "question": "Halloween is traditionally celebrated on which date?",
+          "options": [
+            "October 30",
+            "October 31",
+            "November 1",
+            "November 2"
+          ],
+          "correctAnswer": "October 31"
+        },
+        {
+          "id": 170,
+          "question": "Which Indian festival celebrates the bond between brothers and sisters?",
+          "options": [
+            "Raksha Bandhan",
+            "Karva Chauth",
+            "Bhai Dooj",
+            "Both Raksha Bandhan and Bhai Dooj"
+          ],
+          "correctAnswer": "Both Raksha Bandhan and Bhai Dooj"
+        }
       ]
     },
     {
@@ -312,16 +1895,116 @@
       "icon": "🚀",
       "color": "bg-slate-100",
       "questions": [
-        { "id": 171, "question": "Which planet is closest to the Sun?", "options": ["Venus", "Earth", "Mercury", "Mars"], "correctAnswer": "Mercury" },
-        { "id": 172, "question": "What is the name of our galaxy?", "options": ["Andromeda", "Milky Way", "Triangulum", "Whirlpool"], "correctAnswer": "Milky Way" },
-        { "id": 173, "question": "Which is the largest planet in our solar system?", "options": ["Saturn", "Neptune", "Jupiter", "Uranus"], "correctAnswer": "Jupiter" },
-        { "id": 174, "question": "What is a shooting star actually made of?", "options": ["A falling star", "A meteor", "A comet", "A planet fragment"], "correctAnswer": "A meteor" },
-        { "id": 175, "question": "Which space agency successfully landed Chandrayaan-3 on the Moon in 2023?", "options": ["NASA", "ESA", "ISRO", "Roscosmos"], "correctAnswer": "ISRO" },
-        { "id": 176, "question": "How many planets are in our solar system?", "options": ["7", "8", "9", "10"], "correctAnswer": "8" },
-        { "id": 177, "question": "What do we call a large group of stars held together by gravity?", "options": ["Solar System", "Galaxy", "Nebula", "Constellation"], "correctAnswer": "Galaxy" },
-        { "id": 178, "question": "Who was the first man to walk in space?", "options": ["Yuri Gagarin", "Alexei Leonov", "Neil Armstrong", "Buzz Aldrin"], "correctAnswer": "Alexei Leonov" },
-        { "id": 179, "question": "What is the name of NASA's most famous reusable spacecraft program?", "options": ["Apollo", "Space Shuttle", "Artemis", "Gemini"], "correctAnswer": "Space Shuttle" },
-        { "id": 180, "question": "Which planet is known for its prominent rings?", "options": ["Jupiter", "Saturn", "Uranus", "Neptune"], "correctAnswer": "Saturn" }
+        {
+          "id": 171,
+          "question": "Which planet is closest to the Sun?",
+          "options": [
+            "Venus",
+            "Earth",
+            "Mercury",
+            "Mars"
+          ],
+          "correctAnswer": "Mercury"
+        },
+        {
+          "id": 172,
+          "question": "What is the name of our galaxy?",
+          "options": [
+            "Andromeda",
+            "Milky Way",
+            "Triangulum",
+            "Whirlpool"
+          ],
+          "correctAnswer": "Milky Way"
+        },
+        {
+          "id": 173,
+          "question": "Which is the largest planet in our solar system?",
+          "options": [
+            "Saturn",
+            "Neptune",
+            "Jupiter",
+            "Uranus"
+          ],
+          "correctAnswer": "Jupiter"
+        },
+        {
+          "id": 174,
+          "question": "What is a shooting star actually made of?",
+          "options": [
+            "A falling star",
+            "A meteor",
+            "A comet",
+            "A planet fragment"
+          ],
+          "correctAnswer": "A meteor"
+        },
+        {
+          "id": 175,
+          "question": "Which space agency successfully landed Chandrayaan-3 on the Moon in 2023?",
+          "options": [
+            "NASA",
+            "ESA",
+            "ISRO",
+            "Roscosmos"
+          ],
+          "correctAnswer": "ISRO"
+        },
+        {
+          "id": 176,
+          "question": "How many planets are in our solar system?",
+          "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "correctAnswer": "8"
+        },
+        {
+          "id": 177,
+          "question": "What do we call a large group of stars held together by gravity?",
+          "options": [
+            "Solar System",
+            "Galaxy",
+            "Nebula",
+            "Constellation"
+          ],
+          "correctAnswer": "Galaxy"
+        },
+        {
+          "id": 178,
+          "question": "Who was the first man to walk in space?",
+          "options": [
+            "Yuri Gagarin",
+            "Alexei Leonov",
+            "Neil Armstrong",
+            "Buzz Aldrin"
+          ],
+          "correctAnswer": "Alexei Leonov"
+        },
+        {
+          "id": 179,
+          "question": "What is the name of NASA's most famous reusable spacecraft program?",
+          "options": [
+            "Apollo",
+            "Space Shuttle",
+            "Artemis",
+            "Gemini"
+          ],
+          "correctAnswer": "Space Shuttle"
+        },
+        {
+          "id": 180,
+          "question": "Which planet is known for its prominent rings?",
+          "options": [
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
+          ],
+          "correctAnswer": "Saturn"
+        }
       ]
     },
     {
@@ -330,16 +2013,116 @@
       "icon": "🚗",
       "color": "bg-zinc-200",
       "questions": [
-        { "id": 181, "question": "Which company makes the Mustang?", "options": ["Chevrolet", "Ford", "Dodge", "Toyota"], "correctAnswer": "Ford" },
-        { "id": 182, "question": "What does 'EV' stand for in vehicles?", "options": ["Electric Vehicle", "Engine Variant", "Extra Velocity", "Eco Vehicle"], "correctAnswer": "Electric Vehicle" },
-        { "id": 183, "question": "Which car brand's logo features four overlapping rings?", "options": ["BMW", "Audi", "Volkswagen", "Toyota"], "correctAnswer": "Audi" },
-        { "id": 184, "question": "Which country is home to the car brand Ferrari?", "options": ["Germany", "France", "Italy", "Spain"], "correctAnswer": "Italy" },
-        { "id": 185, "question": "Who founded Tesla Motors?", "options": ["Elon Musk", "Martin Eberhard and Marc Tarpenning", "Jeff Bezos", "Larry Page"], "correctAnswer": "Martin Eberhard and Marc Tarpenning" },
-        { "id": 186, "question": "Which Indian company owns the iconic British brands Jaguar and Land Rover?", "options": ["Mahindra", "Tata Motors", "Maruti Suzuki", "Bajaj"], "correctAnswer": "Tata Motors" },
-        { "id": 187, "question": "What is the world's best-selling car model of all time?", "options": ["Ford F-150", "Toyota Corolla", "Volkswagen Beetle", "Honda Civic"], "correctAnswer": "Toyota Corolla" },
-        { "id": 188, "question": "What does 'SUV' stand for?", "options": ["Sports Utility Vehicle", "Super Urban Vehicle", "Standard Utility Van", "Sport Use Vehicle"], "correctAnswer": "Sports Utility Vehicle" },
-        { "id": 189, "question": "Which two-wheeler brand is famous for its 'Royal' Indian motorcycles?", "options": ["Bajaj", "Royal Enfield", "Hero", "TVS"], "correctAnswer": "Royal Enfield" },
-        { "id": 190, "question": "Which company produces the Boeing 747 aircraft?", "options": ["Airbus", "Boeing", "Lockheed Martin", "Bombardier"], "correctAnswer": "Boeing" }
+        {
+          "id": 181,
+          "question": "Which company makes the Mustang?",
+          "options": [
+            "Chevrolet",
+            "Ford",
+            "Dodge",
+            "Toyota"
+          ],
+          "correctAnswer": "Ford"
+        },
+        {
+          "id": 182,
+          "question": "What does 'EV' stand for in vehicles?",
+          "options": [
+            "Electric Vehicle",
+            "Engine Variant",
+            "Extra Velocity",
+            "Eco Vehicle"
+          ],
+          "correctAnswer": "Electric Vehicle"
+        },
+        {
+          "id": 183,
+          "question": "Which car brand's logo features four overlapping rings?",
+          "options": [
+            "BMW",
+            "Audi",
+            "Volkswagen",
+            "Toyota"
+          ],
+          "correctAnswer": "Audi"
+        },
+        {
+          "id": 184,
+          "question": "Which country is home to the car brand Ferrari?",
+          "options": [
+            "Germany",
+            "France",
+            "Italy",
+            "Spain"
+          ],
+          "correctAnswer": "Italy"
+        },
+        {
+          "id": 185,
+          "question": "Who founded Tesla Motors?",
+          "options": [
+            "Elon Musk",
+            "Martin Eberhard and Marc Tarpenning",
+            "Jeff Bezos",
+            "Larry Page"
+          ],
+          "correctAnswer": "Martin Eberhard and Marc Tarpenning"
+        },
+        {
+          "id": 186,
+          "question": "Which Indian company owns the iconic British brands Jaguar and Land Rover?",
+          "options": [
+            "Mahindra",
+            "Tata Motors",
+            "Maruti Suzuki",
+            "Bajaj"
+          ],
+          "correctAnswer": "Tata Motors"
+        },
+        {
+          "id": 187,
+          "question": "What is the world's best-selling car model of all time?",
+          "options": [
+            "Ford F-150",
+            "Toyota Corolla",
+            "Volkswagen Beetle",
+            "Honda Civic"
+          ],
+          "correctAnswer": "Toyota Corolla"
+        },
+        {
+          "id": 188,
+          "question": "What does 'SUV' stand for?",
+          "options": [
+            "Sports Utility Vehicle",
+            "Super Urban Vehicle",
+            "Standard Utility Van",
+            "Sport Use Vehicle"
+          ],
+          "correctAnswer": "Sports Utility Vehicle"
+        },
+        {
+          "id": 189,
+          "question": "Which two-wheeler brand is famous for its 'Royal' Indian motorcycles?",
+          "options": [
+            "Bajaj",
+            "Royal Enfield",
+            "Hero",
+            "TVS"
+          ],
+          "correctAnswer": "Royal Enfield"
+        },
+        {
+          "id": 190,
+          "question": "Which company produces the Boeing 747 aircraft?",
+          "options": [
+            "Airbus",
+            "Boeing",
+            "Lockheed Martin",
+            "Bombardier"
+          ],
+          "correctAnswer": "Boeing"
+        }
       ]
     },
     {
@@ -348,16 +2131,116 @@
       "icon": "🔤",
       "color": "bg-teal-100",
       "questions": [
-        { "id": 191, "question": "What does the idiom 'spill the beans' mean?", "options": ["Cook food", "Reveal a secret", "Make a mess", "Lose money"], "correctAnswer": "Reveal a secret" },
-        { "id": 192, "question": "Which word means the opposite of 'ancient'?", "options": ["Old", "Modern", "Historic", "Vintage"], "correctAnswer": "Modern" },
-        { "id": 193, "question": "What is a word that reads the same forwards and backwards called?", "options": ["Synonym", "Palindrome", "Acronym", "Anagram"], "correctAnswer": "Palindrome" },
-        { "id": 194, "question": "Which English letter is the most commonly used?", "options": ["A", "E", "S", "T"], "correctAnswer": "E" },
-        { "id": 195, "question": "What does the phrase 'break the ice' mean?", "options": ["Start a fight", "End an awkward silence", "Cool down a room", "Win a game"], "correctAnswer": "End an awkward silence" },
-        { "id": 196, "question": "Which language has the most native speakers worldwide?", "options": ["English", "Spanish", "Mandarin Chinese", "Hindi"], "correctAnswer": "Mandarin Chinese" },
-        { "id": 197, "question": "What is the official language of Brazil?", "options": ["Spanish", "Portuguese", "French", "Italian"], "correctAnswer": "Portuguese" },
-        { "id": 198, "question": "What does 'FYI' stand for?", "options": ["For Your Information", "Find Your Interest", "Fix Your Issue", "For Your Inquiry"], "correctAnswer": "For Your Information" },
-        { "id": 199, "question": "Which punctuation mark is used to indicate possession or contraction?", "options": ["Comma", "Apostrophe", "Hyphen", "Colon"], "correctAnswer": "Apostrophe" },
-        { "id": 200, "question": "What is the term for a word formed by rearranging the letters of another word?", "options": ["Palindrome", "Synonym", "Anagram", "Homonym"], "correctAnswer": "Anagram" }
+        {
+          "id": 191,
+          "question": "What does the idiom 'spill the beans' mean?",
+          "options": [
+            "Cook food",
+            "Reveal a secret",
+            "Make a mess",
+            "Lose money"
+          ],
+          "correctAnswer": "Reveal a secret"
+        },
+        {
+          "id": 192,
+          "question": "Which word means the opposite of 'ancient'?",
+          "options": [
+            "Old",
+            "Modern",
+            "Historic",
+            "Vintage"
+          ],
+          "correctAnswer": "Modern"
+        },
+        {
+          "id": 193,
+          "question": "What is a word that reads the same forwards and backwards called?",
+          "options": [
+            "Synonym",
+            "Palindrome",
+            "Acronym",
+            "Anagram"
+          ],
+          "correctAnswer": "Palindrome"
+        },
+        {
+          "id": 194,
+          "question": "Which English letter is the most commonly used?",
+          "options": [
+            "A",
+            "E",
+            "S",
+            "T"
+          ],
+          "correctAnswer": "E"
+        },
+        {
+          "id": 195,
+          "question": "What does the phrase 'break the ice' mean?",
+          "options": [
+            "Start a fight",
+            "End an awkward silence",
+            "Cool down a room",
+            "Win a game"
+          ],
+          "correctAnswer": "End an awkward silence"
+        },
+        {
+          "id": 196,
+          "question": "Which language has the most native speakers worldwide?",
+          "options": [
+            "English",
+            "Spanish",
+            "Mandarin Chinese",
+            "Hindi"
+          ],
+          "correctAnswer": "Mandarin Chinese"
+        },
+        {
+          "id": 197,
+          "question": "What is the official language of Brazil?",
+          "options": [
+            "Spanish",
+            "Portuguese",
+            "French",
+            "Italian"
+          ],
+          "correctAnswer": "Portuguese"
+        },
+        {
+          "id": 198,
+          "question": "What does 'FYI' stand for?",
+          "options": [
+            "For Your Information",
+            "Find Your Interest",
+            "Fix Your Issue",
+            "For Your Inquiry"
+          ],
+          "correctAnswer": "For Your Information"
+        },
+        {
+          "id": 199,
+          "question": "Which punctuation mark is used to indicate possession or contraction?",
+          "options": [
+            "Comma",
+            "Apostrophe",
+            "Hyphen",
+            "Colon"
+          ],
+          "correctAnswer": "Apostrophe"
+        },
+        {
+          "id": 200,
+          "question": "What is the term for a word formed by rearranging the letters of another word?",
+          "options": [
+            "Palindrome",
+            "Synonym",
+            "Anagram",
+            "Homonym"
+          ],
+          "correctAnswer": "Anagram"
+        }
       ]
     }
   ]

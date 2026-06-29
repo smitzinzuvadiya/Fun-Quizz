@@ -4,7 +4,7 @@ import quizLogo from '../assets/quiz3.png';
 
 export function TermsAndConditions() {
   return (
-    <div className="pt-[68px] animate-in fade-in duration-500 flex flex-col h-full bg-[#7A61FE] overflow-x-hidden relative">
+    <div className="pt-[68px] animate-in fade-in duration-500 h-full bg-[#7A61FE] overflow-y-auto overflow-x-hidden no-scrollbar relative">
       <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#7A61FE] flex justify-between items-center px-[20px] py-4 shadow-md">
         <div>
           <Link to="/" className="flex items-center gap-2">
@@ -14,7 +14,7 @@ export function TermsAndConditions() {
         <CoinBadge />
       </header>
 
-      <main className="flex-1 px-[20px] pt-8 pb-6 overflow-y-auto">
+      <main className="px-[20px] pt-8 pb-6">
         <div className="bg-white rounded-[32px] px-6 py-8 text-[#111827] relative shadow-xl">
           {/* Top Notch Decor matching image */}
           <div className="absolute top-[-12px] left-1/2 transform -translate-x-1/2 w-14 h-6 bg-white rounded-t-[20px] flex justify-center">

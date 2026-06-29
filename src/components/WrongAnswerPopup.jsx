@@ -1,10 +1,11 @@
 import { XMarkIcon } from '@heroicons/react/24/outline';
+import { createPortal } from 'react-dom';
 
-export function WrongAnswerPopup({ isOpen, onClose, onClaim, isCorrect }) {
+export function WrongAnswerPopup({ isOpen, onClose, onClaim, isCorrect, isAdLoading }) {
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
+  return createPortal(
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300 pointer-events-auto">
       <div className="relative w-full max-w-[340px] overflow-hidden bg-[#7A61FE] rounded-[32px] shadow-2xl animate-in zoom-in-95 duration-300">
         
         {/* Decorative background lines/circles similar to image */}
@@ -42,17 +43,19 @@ export function WrongAnswerPopup({ isOpen, onClose, onClaim, isCorrect }) {
 
           <button 
             onClick={onClaim}
-            className="w-full py-[14px] px-6 bg-[#FBBF24] hover:bg-[#F59E0B] text-white font-black text-2xl rounded-full flex items-center justify-center gap-3 transition-transform active:scale-95 shadow-[0_8px_0_0_#D97706] active:shadow-[0_0px_0_0_#D97706] active:translate-y-[8px]"
+            disabled={isAdLoading}
+            className="w-full py-[14px] px-6 bg-[#FBBF24] hover:bg-[#F59E0B] text-white font-black text-2xl rounded-full flex items-center justify-center gap-3 transition-transform active:scale-95 shadow-[0_8px_0_0_#D97706] active:shadow-[0_0px_0_0_#D97706] active:translate-y-[8px] disabled:opacity-70"
           >
             <div className="bg-[#4C1D95] rounded px-1.5 py-1 flex items-center justify-center">
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
                  <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
                </svg>
             </div>
-            Claim
+            {isAdLoading ? "Loading..." : "Claim"}
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

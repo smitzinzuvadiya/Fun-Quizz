@@ -16,9 +16,11 @@ export function Search() {
         <h1 className="text-3xl font-extrabold tracking-tight text-white">Search</h1>
       </header>
 
-      <div className="flex-1 bg-[#5b21b6] rounded-t-[32px] pt-6 flex flex-col relative shadow-[0_-8px_30px_-15px_rgba(0,0,0,0.3)]">
-        <main className="flex-1 flex flex-col px-[20px] pb-6 overflow-y-auto">
-          <div className="relative mb-8">
+      <div className="flex-1 min-h-0 bg-[#5b21b6] rounded-t-[32px] pt-6 flex flex-col relative shadow-[0_-8px_30px_-15px_rgba(0,0,0,0.3)]">
+        
+        {/* Fixed Search Header */}
+        <div className="px-[20px] pb-2 shrink-0">
+          <div className="relative mb-6">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <MagnifyingGlassIcon className="w-5 h-5 text-on-surface-variant" />
             </div>
@@ -30,23 +32,24 @@ export function Search() {
               className="w-full bg-surface py-4 pl-12 pr-4 rounded-xl shadow-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
             />
           </div>
+          <h2 className="text-lg font-bold mb-4 text-white">
+            {query ? 'Search Results' : 'All Categories'}
+          </h2>
+        </div>
 
-          <div>
-            <h2 className="text-lg font-bold mb-4 text-white">
-              {query ? 'Search Results' : 'All Categories'}
-            </h2>
-            {filteredCategories.length > 0 ? (
-              <div className="grid grid-cols-1 gap-4">
-                {filteredCategories.map((category) => (
-                  <CategoryCard key={category.id} category={category} />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-white/70 font-medium">No categories found for "{query}".</p>
-              </div>
-            )}
-          </div>
+        {/* Scrollable Categories List */}
+        <main className="flex-1 min-h-0 flex flex-col px-[20px] pb-6 overflow-y-auto">
+          {filteredCategories.length > 0 ? (
+            <div className="grid grid-cols-1 gap-4">
+              {filteredCategories.map((category) => (
+                <CategoryCard key={category.id} category={category} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-white/70 font-medium">No categories found for "{query}".</p>
+            </div>
+          )}
         </main>
       </div>
     </div>

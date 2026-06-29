@@ -8,6 +8,8 @@ import quizData from '../data/quizData.json';
 import { useAds } from '../hooks/useAds';
 import { useCoins } from '../hooks/useCoins';
 import { useRef } from 'react';
+import { SponsoredSquareAd } from '../components/SponsoredSquareAd';
+import { playRewardAd } from '../utils/adHelper';
 
 
 export function Home() {
@@ -19,28 +21,15 @@ export function Home() {
 
   const [isInfoExpanded, setIsInfoExpanded] = useState(false);
   const [showFreeCoinsBtn, setShowFreeCoinsBtn] = useState(true);
+  const [isAdLoading, setIsAdLoading] = useState(false);
   const adOnCloseActionRef = useRef(null);
 
-  useEffect(() => {
-    const lastUsed = localStorage.getItem('freeCoinsLastUsed');
-    if (lastUsed) {
-      const timePassed = Date.now() - parseInt(lastUsed, 10);
-      const cooldown = 3 * 60 * 1000;
-      if (timePassed < cooldown) {
-        setShowFreeCoinsBtn(false);
-        const timer = setTimeout(() => setShowFreeCoinsBtn(true), cooldown - timePassed);
-        return () => clearTimeout(timer);
-      }
-    }
-  }, []);
+
 
   const handleAdClose = () => {
     dismissAd();
     if (adOnCloseActionRef.current === 'free_coins') {
       addCoins(100);
-      localStorage.setItem('freeCoinsLastUsed', Date.now().toString());
-      setShowFreeCoinsBtn(false);
-      setTimeout(() => setShowFreeCoinsBtn(true), 3 * 60 * 1000);
     }
     adOnCloseActionRef.current = null;
   };
@@ -66,18 +55,7 @@ export function Home() {
         {/* Ad Placement Container */}
         <div className="w-full mb-6 flex justify-center flex-shrink-0">
           <div className="w-full min-h-[250px] bg-white/10 flex flex-col items-center justify-center text-white/60 shadow-inner relative overflow-hidden p-4">
-            <span className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-2">Advertisement</span>
-            {/* 
-              TODO: Insert your Ad code here 
-              Example:
-              <ins className="adsbygoogle"
-                   style={{ display: 'block', width: '100%', height: '250px' }}
-                   data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                   data-ad-slot="XXXXXXXXXX"
-                   data-ad-format="rectangle"
-                   data-full-width-responsive="true"></ins>
-            */}
-            <span className="text-xs mt-auto">Ad Space (Responsive Square)</span>
+            <SponsoredSquareAd></SponsoredSquareAd>
           </div>
         </div>
 
@@ -182,11 +160,25 @@ export function Home() {
         {/* Floating Get Free Coins Button */}
         {showFreeCoinsBtn && (
           <button
+            disabled={isAdLoading}
             onClick={() => {
-              adOnCloseActionRef.current = 'free_coins';
-              showAd();
+              if (isAdLoading) return;
+              setIsAdLoading(true);
+              playRewardAd({
+                adName: 'home_free_coins',
+                onRewardGranted: () => {
+                  setIsAdLoading(false);
+                  addCoins(100);
+                },
+                onAdDismissed: () => {
+                  setIsAdLoading(false);
+                },
+                onAdError: () => {
+                  setIsAdLoading(false);
+                }
+              });
             }}
-            className="fixed bottom-16 right-6 w-20 h-20 bg-gradient-to-br from-[#F59E0B] to-[#D97706] rounded-full shadow-2xl flex flex-col items-center justify-center border-[3px] border-[#FDE68A] hover:scale-105 active:scale-95 transition-transform z-40 animate-bounce"
+            className="fixed bottom-16 right-6 w-20 h-20 bg-gradient-to-br from-[#F59E0B] to-[#D97706] rounded-full shadow-2xl flex flex-col items-center justify-center border-[3px] border-[#FDE68A] hover:scale-105 active:scale-95 transition-transform z-40 animate-bounce disabled:opacity-50"
             style={{ boxShadow: '0 10px 25px -5px rgba(245, 158, 11, 0.5), 0 8px 10px -6px rgba(245, 158, 11, 0.5)' }}
           >
             <div className="w-8 h-8 bg-blue-900 rounded-md flex items-center justify-center mb-1 border border-blue-400/50 shadow-inner">

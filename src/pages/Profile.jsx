@@ -12,8 +12,8 @@ export function Profile() {
         <h1 className="text-3xl font-extrabold tracking-tight text-white">Profile</h1>
       </header>
       
-      <div className="flex-1 bg-[#5b21b6] rounded-t-[32px] pt-6 flex flex-col relative shadow-[0_-8px_30px_-15px_rgba(0,0,0,0.3)]">
-        <main className="flex-1 flex flex-col px-[20px] pb-6 overflow-y-auto">
+      <div className="flex-1 min-h-0 bg-[#5b21b6] rounded-t-[32px] pt-6 flex flex-col relative shadow-[0_-8px_30px_-15px_rgba(0,0,0,0.3)]">
+        <main className="flex-1 min-h-0 flex flex-col px-[20px] pb-6 overflow-y-auto">
           <div className="bg-surface rounded-[24px] p-6 shadow-sm flex flex-col items-center mb-6">
             <div className="w-24 h-24 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-4">
               <SparklesIcon className="w-12 h-12" />

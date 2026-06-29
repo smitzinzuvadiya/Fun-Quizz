@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { createPortal } from 'react-dom';
 import { Home } from './pages/Home';
 import { PromoHome } from './pages/PromoHome';
 import { Search } from './pages/Search';
@@ -38,21 +39,27 @@ function AppContent() {
 
   return (
     <>
-      <div className="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar relative z-10">
-        <Routes>
-          <Route path="/landing" element={<ProtectedRoute allowUnclaimed><LandingQuiz /></ProtectedRoute>} />
-          <Route path="/welcome" element={<ProtectedRoute allowUnclaimed><Welcome /></ProtectedRoute>} />
-          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-          <Route path="/promo-home" element={<ProtectedRoute><PromoHome /></ProtectedRoute>} />
-          <Route path="/search" element={<ProtectedRoute><Search /></ProtectedRoute>} />
-          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-          <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
-          <Route path="/rules" element={<ProtectedRoute><ContestRules /></ProtectedRoute>} />
-          <Route path="/terms" element={<ProtectedRoute><TermsAndConditions /></ProtectedRoute>} />
-          <Route path="/quiz/:categoryId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
-        </Routes>
+      <div className="absolute inset-0 flex flex-col z-10 overflow-hidden">
+        <div className="flex-1 overflow-hidden relative">
+          <Routes>
+            <Route path="/landing" element={<ProtectedRoute allowUnclaimed><LandingQuiz /></ProtectedRoute>} />
+            <Route path="/welcome" element={<ProtectedRoute allowUnclaimed><Welcome /></ProtectedRoute>} />
+            <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+            <Route path="/promo-home" element={<ProtectedRoute><PromoHome /></ProtectedRoute>} />
+            <Route path="/search" element={<ProtectedRoute><Search /></ProtectedRoute>} />
+            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+            <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+            <Route path="/rules" element={<ProtectedRoute><ContestRules /></ProtectedRoute>} />
+            <Route path="/terms" element={<ProtectedRoute><TermsAndConditions /></ProtectedRoute>} />
+            <Route path="/quiz/:categoryId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
+          </Routes>
+        </div>
+        {showBottomNav && (
+          <div className="w-full shrink-0 z-40 bg-[#6D4AFF]">
+            <BottomNav />
+          </div>
+        )}
       </div>
-      {showBottomNav && <BottomNav />}
     </>
   );
 }
@@ -64,15 +71,15 @@ function App() {
         <Router>
           {/* Desktop wrapper with blurred backdrop to simulate mobile device */}
           <div className="h-[100dvh] w-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-0">
-            
+
             {/* The App Container touching top and bottom */}
-            <div 
+            <div
               className="relative w-full h-[100dvh] max-w-[430px] bg-background overflow-hidden flex flex-col shadow-2xl mx-auto"
               style={{ transform: 'translateZ(0)' }}
             >
               <AppContent />
             </div>
-            
+
           </div>
         </Router>
       </CoinsProvider>

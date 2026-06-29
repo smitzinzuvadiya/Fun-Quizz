@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import quizData from '../data/quizData.json';
 import { useCoins } from '../hooks/useCoins';
 import { SponsoredSquareAd } from '../components/SponsoredSquareAd';
 import { QuestionCard } from '../components/QuestionCard';
 import { WrongAnswerPopup } from '../components/WrongAnswerPopup';
 import { AdPopup } from '../components/AdPopup';
 import confetti from 'canvas-confetti';
+import { playRewardAd } from '../utils/adHelper';
 
 export function LandingQuiz() {
   const navigate = useNavigate();
@@ -60,9 +62,28 @@ export function LandingQuiz() {
     proceedToNext();
   };
 
+  const [isAdLoading, setIsAdLoading] = useState(false);
+
   const handleWrongAnswerClaim = () => {
+    if (isAdLoading) return;
+    setIsAdLoading(true);
     setShowWrongPopup(false);
-    setShowAdPopup(true);
+    playRewardAd({
+      adName: "landing_claim",
+      onRewardGranted: () => {
+        setIsAdLoading(false);
+        incrementAdsWatched();
+        proceedToNext();
+      },
+      onAdDismissed: () => {
+        setIsAdLoading(false);
+        proceedToNext();
+      },
+      onAdError: () => {
+        setIsAdLoading(false);
+        proceedToNext();
+      }
+    });
   };
 
   const handleAdClose = () => {
@@ -73,17 +94,18 @@ export function LandingQuiz() {
 
   return (
     <>
-      <WrongAnswerPopup 
-        isOpen={showWrongPopup} 
+      <WrongAnswerPopup
+        isOpen={showWrongPopup}
         isCorrect={lastAnswerCorrect}
-        onClose={handleWrongAnswerClose} 
-        onClaim={handleWrongAnswerClaim} 
+        onClose={handleWrongAnswerClose}
+        onClaim={handleWrongAnswerClaim}
+        isAdLoading={isAdLoading}
       />
-      <AdPopup 
-        isOpen={showAdPopup} 
-        onClose={handleAdClose} 
+      <AdPopup
+        isOpen={showAdPopup}
+        onClose={handleAdClose}
       />
-      
+
       <div className="h-full flex flex-col pt-4 px-[20px] pb-2 animate-in slide-in-from-right duration-300 overflow-y-auto no-scrollbar bg-[#7A61FE]">
         <SponsoredSquareAd />
 
@@ -97,7 +119,7 @@ export function LandingQuiz() {
 
           <div className="w-full max-w-md bg-white/15 backdrop-blur-sm rounded-3xl p-6 text-white text-left">
             <h2 className="text-2xl font-bold mb-6">Discover Fun Quizzes</h2>
-            
+
             <ul className="space-y-6">
               {[
                 "Expand your expertise through our exclusive and wide-ranging quiz topics.",
