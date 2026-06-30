@@ -100,13 +100,20 @@ export function PullToRefresh({ children, onRefresh }) {
         style={{ height: `${pullDistance}px`, transition: pulling ? 'none' : 'height 0.3s ease-out' }}
       >
         <div className="pb-4">
-          <ArrowPathIcon 
-            className={`w-7 h-7 text-white ${isRefreshing ? 'animate-spin' : ''}`} 
+          <div 
+            className={`rounded-full bg-[#1e1b2e] flex items-center justify-center shadow-lg transition-opacity ${isRefreshing ? 'animate-spin' : ''}`}
             style={{ 
-              transform: `rotate(${pullDistance * 3}deg)`,
-              opacity: pullDistance / THRESHOLD
+              width: '42px',
+              height: '42px',
+              transform: isRefreshing ? 'none' : `rotate(${pullDistance * 3}deg)`,
+              opacity: Math.min(pullDistance / (THRESHOLD * 0.8), 1)
             }}
-          />
+          >
+            <ArrowPathIcon 
+              className="w-6 h-6 text-[#F59E0B]"
+              strokeWidth={2.5}
+            />
+          </div>
         </div>
       </div>
 
