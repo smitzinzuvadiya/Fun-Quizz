@@ -5,7 +5,7 @@ import { useCoins } from '../hooks/useCoins';
 import { SponsoredSquareAd } from '../components/SponsoredSquareAd';
 import { QuestionCard } from '../components/QuestionCard';
 import { WrongAnswerPopup } from '../components/WrongAnswerPopup';
-import { AdPopup } from '../components/AdPopup';
+
 import confetti from 'canvas-confetti';
 import { playRewardAd } from '../utils/adHelper';
 
@@ -15,7 +15,7 @@ export function LandingQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showWrongPopup, setShowWrongPopup] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false);
-  const [showAdPopup, setShowAdPopup] = useState(false);
+
 
   const questions = [
     {
@@ -37,7 +37,7 @@ export function LandingQuiz() {
       setCurrentQuestionIndex(prev => prev + 1);
     } else {
       markLandingSeen();
-      navigate('/welcome');
+      setTimeout(() => navigate('/welcome'), 50);
     }
   };
 
@@ -86,11 +86,6 @@ export function LandingQuiz() {
     });
   };
 
-  const handleAdClose = () => {
-    setShowAdPopup(false);
-    incrementAdsWatched();
-    proceedToNext();
-  };
 
   return (
     <>
@@ -100,10 +95,6 @@ export function LandingQuiz() {
         onClose={handleWrongAnswerClose}
         onClaim={handleWrongAnswerClaim}
         isAdLoading={isAdLoading}
-      />
-      <AdPopup
-        isOpen={showAdPopup}
-        onClose={handleAdClose}
       />
 
       <div className="h-full flex flex-col pt-4 px-[20px] pb-2 animate-in slide-in-from-right duration-300 overflow-y-auto no-scrollbar bg-[#7A61FE]">

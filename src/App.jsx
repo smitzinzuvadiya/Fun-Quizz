@@ -14,8 +14,7 @@ import { BottomNav } from './components/BottomNav';
 import { CoinsProvider } from './context/CoinsContext';
 import { SettingsProvider } from './context/SettingsContext';
 import { useCoins } from './hooks/useCoins';
-
-
+import { PullToRefresh } from './components/PullToRefresh';
 
 function ProtectedRoute({ children, allowUnclaimed }) {
   const { hasClaimedBonus, hasSeenLanding } = useCoins();
@@ -37,22 +36,29 @@ function AppContent() {
   // Hide bottom nav on Quiz, Welcome, Landing, and PromoHome screens
   const showBottomNav = !location.pathname.startsWith('/quiz') && !location.pathname.startsWith('/welcome') && !location.pathname.startsWith('/landing') && !location.pathname.startsWith('/promo-home');
 
+  const handleRefresh = async () => {
+    await new Promise(resolve => setTimeout(resolve, 800));
+    window.location.reload();
+  };
+
   return (
     <>
-      <div className="absolute inset-0 flex flex-col z-10 overflow-hidden">
-        <div className="flex-1 overflow-hidden relative">
-          <Routes>
-            <Route path="/landing" element={<ProtectedRoute allowUnclaimed><LandingQuiz /></ProtectedRoute>} />
-            <Route path="/welcome" element={<ProtectedRoute allowUnclaimed><Welcome /></ProtectedRoute>} />
-            <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-            <Route path="/promo-home" element={<ProtectedRoute><PromoHome /></ProtectedRoute>} />
-            <Route path="/search" element={<ProtectedRoute><Search /></ProtectedRoute>} />
-            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-            <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
-            <Route path="/rules" element={<ProtectedRoute><ContestRules /></ProtectedRoute>} />
-            <Route path="/terms" element={<ProtectedRoute><TermsAndConditions /></ProtectedRoute>} />
-            <Route path="/quiz/:categoryId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
-          </Routes>
+      <div className="absolute inset-0 flex flex-col z-10 overflow-hidden bg-[#7A61FE]">
+        <div className="flex-1 overflow-hidden relative w-full h-full">
+          <PullToRefresh onRefresh={handleRefresh}>
+            <Routes>
+              <Route path="/landing" element={<ProtectedRoute allowUnclaimed><LandingQuiz /></ProtectedRoute>} />
+              <Route path="/welcome" element={<ProtectedRoute allowUnclaimed><Welcome /></ProtectedRoute>} />
+              <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+              <Route path="/promo-home" element={<ProtectedRoute><PromoHome /></ProtectedRoute>} />
+              <Route path="/search" element={<ProtectedRoute><Search /></ProtectedRoute>} />
+              <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+              <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+              <Route path="/rules" element={<ProtectedRoute><ContestRules /></ProtectedRoute>} />
+              <Route path="/terms" element={<ProtectedRoute><TermsAndConditions /></ProtectedRoute>} />
+              <Route path="/quiz/:categoryId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
+            </Routes>
+          </PullToRefresh>
         </div>
         {showBottomNav && (
           <div className="w-full shrink-0 z-40 bg-[#6D4AFF]">

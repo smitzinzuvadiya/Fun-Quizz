@@ -31,6 +31,7 @@ export function Quiz() {
   const [showResultPopup, setShowResultPopup] = useState(false);
   const [showPrizePopup, setShowPrizePopup] = useState(false);
   const [showNotEnoughCoinsPopup, setShowNotEnoughCoinsPopup] = useState(false);
+  const [showQuitConfirmPopup, setShowQuitConfirmPopup] = useState(false);
   const [extraTimeCounter, setExtraTimeCounter] = useState(0);
   const [trigger5050, setTrigger5050] = useState(0);
   const [triggerAudience, setTriggerAudience] = useState(0);
@@ -264,6 +265,12 @@ export function Quiz() {
   };
 
   const handleQuit = () => {
+    setShowQuitConfirmPopup(true);
+  };
+
+  const confirmQuit = () => {
+    setShowQuitConfirmPopup(false);
+    clearQuizSession();
     navigate('/');
   };
 
@@ -439,7 +446,14 @@ export function Quiz() {
 
       <AdPopup isOpen={shouldShowAd} onClose={handleAdClose} adContext="quiz" />
 
-      <div className="flex flex-col items-center mb-6 mt-4 relative z-10 text-white">
+      {/* Header with Back Arrow for Active Quiz */}
+      <header className="flex justify-between items-center w-full relative z-10 px-2 mt-2">
+        <button onClick={handleQuit} className="p-2 -ml-2 hover:bg-white/10 rounded-full transition-colors shrink-0">
+          <ArrowLeftIcon className="w-6 h-6 text-white" strokeWidth={2.5} />
+        </button>
+      </header>
+
+      <div className="flex flex-col items-center mb-6 mt-1 relative z-10 text-white">
         <span className="font-extrabold text-[16px] uppercase opacity-95 mb-1">{category.name}</span>
         <h1 className="text-[24px] md:text-[24px] font-black flex items-center justify-center gap-1.5 leading-none">
           Play and Win {winAmount} <span className="text-[#FBBF24] text-[22px]">🪙</span>
@@ -458,7 +472,7 @@ export function Quiz() {
         </div>
       </div>
 
-      <main className="flex-1 flex flex-col relative z-20">
+      <main className="flex flex-col relative z-20 w-full mt-2">
         <QuestionCard
           question={currentQuestion}
           onAnswer={handleAnswer}
@@ -469,7 +483,7 @@ export function Quiz() {
           answerHistory={answerHistory}
           onTimeOut={handleTimeOut}
           extraTimeCounter={extraTimeCounter}
-          isAdOpen={shouldShowAd}
+          isAdOpen={shouldShowAd || isAdLoading}
           onUseLifeline={handleUseLifeline}
           trigger5050={trigger5050}
           triggerAudience={triggerAudience}
@@ -574,6 +588,39 @@ export function Quiz() {
                   ? 'Great job finishing the quiz! Click continue to go home.'
                   : 'Click on video ad to get more 15 seconds and continue quiz.'}
               </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quit Confirmation Popup */}
+      {showQuitConfirmPopup && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
+          <div className="w-full max-w-sm bg-[#6D4AFF] rounded-[32px] p-6 text-center relative overflow-hidden shadow-2xl border border-white/10">
+            {/* Background pattern */}
+            <div className="absolute top-0 right-0 w-64 h-64 border-[1px] border-white/5 rounded-full blur-[1px] -mr-16 -mt-16 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 border-[1px] border-white/5 rounded-full blur-[1px] -ml-10 -mb-10 pointer-events-none"></div>
+
+            <h2 className="text-white text-[28px] font-black mb-2 tracking-tight relative z-10 mt-2">
+              Quit Quiz?
+            </h2>
+            <p className="text-white/90 font-medium text-[15px] mb-8 leading-relaxed relative z-10 px-2">
+              Are you sure you want to quit? Your progress will be lost.
+            </p>
+
+            <div className="flex flex-col gap-3 relative z-10">
+              <button
+                onClick={() => setShowQuitConfirmPopup(false)}
+                className="w-full bg-[#F59E0B] text-white font-black text-[18px] py-3.5 rounded-[20px] shadow-lg hover:bg-[#D97706] active:scale-95 transition-all"
+              >
+                No, Continue Playing
+              </button>
+              <button
+                onClick={confirmQuit}
+                className="w-full bg-white/20 text-white font-bold text-[16px] py-3.5 rounded-[20px] hover:bg-white/30 active:scale-95 transition-all"
+              >
+                Yes, Quit
+              </button>
             </div>
           </div>
         </div>

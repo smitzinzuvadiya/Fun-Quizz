@@ -74,13 +74,13 @@ export function PromoCard() {
         {/* Buttons */}
         <div className="flex gap-3 px-1 mb-2 shrink-0">
           <button 
-            onClick={() => navigate('/quiz/sports')}
+            onClick={() => navigate('/quiz/sport')}
             className="flex-1 bg-[#4a3f91] text-white font-bold text-[16px] py-3.5 rounded-[24px] shadow-sm hover:bg-[#3d3275] active:scale-95 transition-all"
           >
             Join Quiz
           </button>
           <button 
-            onClick={() => navigate('/quiz/sports')}
+            onClick={() => navigate('/quiz/sport')}
             className="flex-1 bg-[#F59E0B] text-white font-bold text-[16px] py-3.5 rounded-[24px] shadow-sm hover:bg-[#D97706] active:scale-95 transition-all"
           >
             Play as Guest

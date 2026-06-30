@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCoins } from '../hooks/useCoins';
-import { AdPopup } from '../components/AdPopup';
+
 import { SponsoredSquareAd } from '../components/SponsoredSquareAd';
 import confetti from 'canvas-confetti';
 import { playRewardAd } from '../utils/adHelper';
@@ -9,7 +9,7 @@ import { playRewardAd } from '../utils/adHelper';
 export function Welcome() {
   const navigate = useNavigate();
   const { claimWelcomeBonus, adsWatchedInLanding } = useCoins();
-  const [showAd, setShowAd] = useState(false);
+
 
   // Compute bonus amount: base 200 + 100 per ad watched in landing page
   const bonusAmount = 200 + (adsWatchedInLanding * 100);
@@ -32,27 +32,22 @@ export function Welcome() {
       adName: "welcome_play_now",
       onRewardGranted: () => {
         setIsAdLoading(false);
-        navigate('/');
+        setTimeout(() => navigate('/'), 50);
       },
       onAdDismissed: () => {
         setIsAdLoading(false);
-        navigate('/');
+        setTimeout(() => navigate('/'), 50);
       },
       onAdError: () => {
         setIsAdLoading(false);
-        navigate('/');
+        setTimeout(() => navigate('/'), 50);
       }
     });
   };
 
-  const handleAdClose = () => {
-    setShowAd(false);
-    navigate('/');
-  };
 
   return (
     <>
-      <AdPopup isOpen={showAd} onClose={handleAdClose} />
       <div className="h-full w-full flex flex-col bg-[#7A61FE] animate-in fade-in duration-700 overflow-y-auto no-scrollbar px-4 pt-4 pb-8 relative">
         {/* Background decorative faint shapes if needed */}
         <div className="absolute inset-0 pointer-events-none opacity-20 overflow-hidden z-0">

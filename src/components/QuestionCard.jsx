@@ -124,9 +124,11 @@ export function QuestionCard({
     }
   }, [extraTimeCounter]);
 
+  const isAnyPopupOpen = is5050PopupOpen || isAudiencePopupOpen || isFreezePopupOpen || isFlipPopupOpen;
+
   // Timer logic for showFooter mode
   useEffect(() => {
-    if (!showFooter || isAdOpen || isTimerFrozen) return;
+    if (!showFooter || isAdOpen || isTimerFrozen || isAnyPopupOpen) return;
     
     if (timeLeft === 0) {
       if (onTimeOut && !isAnswering && !hasTimedOutRef.current) {
@@ -141,7 +143,7 @@ export function QuestionCard({
     }, 1000);
     
     return () => clearInterval(timer);
-  }, [showFooter, timeLeft, onTimeOut, isAnswering, isAdOpen, isTimerFrozen]);
+  }, [showFooter, timeLeft, onTimeOut, isAnswering, isAdOpen, isTimerFrozen, isAnyPopupOpen]);
 
   const handleOptionClick = (option) => {
     if (isAnswering) return;
@@ -252,7 +254,7 @@ export function QuestionCard({
 
         {/* Footer for Timer & Lifeline */}
         {showFooter && (
-          <div className="flex flex-col mt-6 pt-2 gap-5">
+          <div className="flex flex-col mt-4 pt-1 gap-4">
             <div className="flex justify-between items-center">
               <div className={`flex items-center gap-2 border ${isTimerFrozen ? 'border-[#38bdf8] bg-[#f0f9ff]' : 'border-gray-200 bg-white'} rounded-full px-4 py-2.5 transition-colors duration-300`}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={`w-5 h-5 ${isTimerFrozen ? 'text-[#0284c7]' : 'text-[#6D4AFF]'}`}>
